@@ -1,14 +1,14 @@
 ﻿# 🏛️ Dönemlerin İzinde: Sanal Dünya Müzesi
 
-[cite_start]Bu proje, dünyadaki önemli kültürel eserleri dönemlere (Antik Çağ, Orta Çağ, Rönesans, Modern Çağ) ayırarak tanıtan, içerik odaklı ve erişilebilir bir sanal müze web sitesidir. [cite_start]Web Tasarım ve Değerlendirme dersi kapsamında final projesi olarak geliştirilmiştir.
+[cite_start] Bu proje, dünyadaki önemli kültürel eserleri dönemlere (Antik Çağ, Orta Çağ, Rönesans, Modern Çağ) ayırarak tanıtan, içerik odaklı ve erişilebilir bir sanal müze web sitesidir. [cite_start]Web Tasarım ve Değerlendirme dersi kapsamında final projesi olarak geliştirilmiştir.
 
 ## 🎯 Projenin Amacı
-[cite_start]İnternet tarihi yerine somut, görsel ve öğretici bir içerik sunarak kullanıcıların tarihsel bir yolculuğa çıkmasını sağlamak. [cite_start]Proje, basit bir arayüz, yüksek performans ve erişilebilirlik standartlarını (WCAG) temel almaktadır.
+[cite_start] İnternet tarihi yerine somut, görsel ve öğretici bir içerik sunarak kullanıcıların tarihsel bir yolculuğa çıkmasını sağlamak. [cite_start]Proje, basit bir arayüz, yüksek performans ve erişilebilirlik standartlarını (WCAG) temel almaktadır.
 
 ## 🛠️ Kullanılan Teknolojiler
-* **HTML5 & CSS3:** [cite_start]Semantik ve responsive (mobil uyumlu) sayfa iskeletleri.
-* **JavaScript (Fetch API) & JSON:** [cite_start]Eser verilerinin dinamik olarak sayfaya çekilmesi.
-* **Performans Optimizasyonu:** [cite_start]Lighthouse (Hedef %85+), Lazy Loading ve SEO uyumlu meta etiketler.
+* **HTML5 & CSS3:** [cite_start] Semantik ve responsive (mobil uyumlu) sayfa iskeletleri.
+* **JavaScript (Fetch API) & JSON:** [cite_start] Eser verilerinin dinamik olarak sayfaya çekilmesi.
+* **Performans Optimizasyonu:** [cite_start] Lighthouse (Hedef %85+), Lazy Loading ve SEO uyumlu meta etiketler.
 
 ## 👥 Ekip ve Görev Dağılımı (Paralel Çalışma Modeli)
 Bu proje, üç kişilik bir ekip tarafından paralel çalışma prensibiyle geliştirilmiştir:
