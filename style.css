@@ -1,0 +1,323 @@
+/* ==========================================================================
+   1. KÖK DEĞİŞKENLER VE TİPOGRAFİ (Sena'nın Renk ve Font Kararları)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@600;700&display=swap');
+
+:root {
+    /* Renk Paleti: Google Arts & Culture tarzı minimalist ve yüksek kontrastlı */
+    --bg-color: #ffffff;         /* Arka plan: Temiz beyaz */
+    --text-color: #1a1a1a;       /* Metin: Koyu gri/siyah (Yüksek kontrast) */
+    --text-muted: #5e5e5e;       /* Açıklamalar için ikincil gri */
+    --border-color: #e5e5e5;     /* Hafif ayırıcı çizgiler */
+    --focus-color: #0b57d0;      /* Erişilebilirlik (Focus) için mavi */
+
+    /* Tipografi: Müze hissi için Serif (Başlık), Okunabilirlik için Sans-Serif (Metin) */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   2. SIFIRLAMA (RESET) VE ERİŞİLEBİLİRLİK TEMELLERİ (WCAG)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 16px; /* Mobilde okunabilirlik sınırı */
+    line-height: 1.6;
+    overflow-x: hidden; /* Taşma ve yatay kaydırma kesinlikle yasak */
+}
+
+/* Klavye Gezintisi (Focus Stili): Erişilebilirlik puanı için kritik! */
+*:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 4px;
+}
+
+/* İçeriğe Atla Linki (Sadece Tab ile basıldığında görünür) */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    padding: 12px 24px;
+    font-weight: 500;
+    z-index: 9999;
+    text-decoration: none;
+    transition: top 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 20px;
+}
+
+/* ==========================================================================
+   3. LAYOUT: HEADER VE HERO (Ana Başlık) ALANI
+   ========================================================================== */
+.main-header {
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.5rem 2rem;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.nav-links a.active {
+    border-bottom: 2px solid var(--text-color);
+    padding-bottom: 4px;
+}
+
+/* Hero Section (Büyük Başlık Alanı - Nefes alan boşluklar) */
+.hero-section {
+    text-align: center;
+    padding: 6rem 2rem 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+    color: var(--text-muted);
+    font-size: 1.25rem;
+}
+
+/* ==========================================================================
+   4. GRID YAPISI: DÖNEM KARTLARI (Dinamik İçerik Kutuları)
+   ========================================================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem 5rem 2rem;
+}
+
+#period-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 3rem; /* Kartlar arası ferah boşluk */
+}
+
+/* Kart Tasarımı */
+.period-card {
+    display: flex;
+    flex-direction: column;
+}
+
+/* BEYZA İÇİN NOT: 
+   Sena burada sadece kartın temel yapısını kurdu. 
+   Sen (Beyza) projede istendiği gibi mikro etkileşimleri (.period-card:hover gibi) kendi UX görevlerinde bu sınıfa ekleyeceksin. */
+
+.image-wrapper {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Görsellerin standart ve düzenli durmasını sağlar */
+    background-color: #f8f8f8; /* Yüklenmeden önceki gri zemin */
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Resmi yamultmadan kutuya sığdırır */
+}
+
+.card-info h2 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-info p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.explore-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    border-bottom: 1px solid var(--text-color);
+    padding-bottom: 2px;
+}
+
+/* ==========================================================================
+   5. ALT BİLGİ (FOOTER)
+   ========================================================================== */
+.footer {
+    border-top: 1px solid var(--border-color);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.footer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE (MOBİL UYUM) - PDF'teki "Taşma Yok" Kuralı
+   ========================================================================== */
+
+/* Tablet (768px ve altı) */
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 4rem 1rem 3rem 1rem;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #period-grid {
+        gap: 2rem;
+    }
+}
+
+/* Mobil (375px ve altı) */
+@media (max-width: 375px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .image-wrapper {
+        aspect-ratio: 1 / 1; /* Mobilde görselleri kare yapıyoruz */
+    }
+}
+/* ==========================================================================
+   7. ESER DETAY SAYFASI (Premium Sol-Sağ Düzeni)
+   ========================================================================== */
+.back-navigation {
+    margin-bottom: 2rem;
+}
+
+.btn-back {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.btn-back:hover {
+    color: var(--text-color);
+}
+
+/* Flexbox ile Sol Görsel - Sağ Metin Düzeni */
+.detail-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 4rem; /* Görsel ile metin arasına çok geniş ve ferah bir boşluk  */
+    background-color: var(--card-bg);
+    padding: 3rem;
+    border-radius: 12px; /* Hafif yuvarlatılmış premium köşeler */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Çok hafif, zarif bir gölge */
+}
+
+/* Sol Görsel Alanı (%50 Genişlik) */
+.detail-image {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.detail-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Sağ Metin Alanı (%50 Genişlik) */
+.detail-content {
+    flex: 1;
+}
+
+.serif-title {
+    font-family: var(--font-heading);
+    font-size: 3rem; /* Eser adını kocaman ve ihtişamlı yapıyoruz */
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.artifact-meta {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color); /* Şık bir ayırıcı çizgi */
+}
+
+.artifact-meta p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.artifact-meta strong {
+    color: var(--text-color); /* Vurgu için strong kullanımı [cite: 56] */
+}
+
+.artifact-description p {
+    font-size: 1.1rem;
+    line-height: 1.8; /* Okumayı kolaylaştıran ferah satır aralığı */
+    color: var(--text-color);
+}
+
+/* Mobil Uyum (Responsive) - PDF Kuralı: Telefondaki yapı bozulmamalı [cite: 41, 42] */
+@media (max-width: 900px) {
+    .detail-layout {
+        flex-direction: column; /* Mobilde görsel üstte, metin altta olacak  */
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+}
