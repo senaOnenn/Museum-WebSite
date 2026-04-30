@@ -1,37 +1,36 @@
-# 🏛️ Dönemlerin İzinde: Sanal Dünya Müzesi
+# 🏛️ Traces of Eras: Virtual World Museum
 
-Bu proje, dünyadaki önemli kültürel eserleri dönemlere (Antik Çağ, Orta Çağ, Rönesans, Modern Çağ) ayırarak tanıtan, içerik odaklı ve erişilebilir bir sanal müze web sitesidir. Web Tasarım ve Değerlendirme dersi kapsamında final projesi olarak geliştirilmiştir.
+A content-focused and accessible virtual museum web application that introduces significant cultural artifacts across historical periods, including **Antiquity, the Middle Ages, the Renaissance, and the Modern Era**. Developed as a final project for the *Web Design and Evaluation* course.
 
-## 🎯 Projenin Amacı
-İnternet tarihi yerine somut, görsel ve öğretici bir içerik sunarak kullanıcıların tarihsel bir yolculuğa çıkmasını sağlamak. Proje, basit bir arayüz, yüksek performans ve erişilebilirlik standartlarını (WCAG) temel almaktadır.
+## 🎯 Project Objective
+The goal is to provide a visual and educational journey through history rather than just a timeline. The project is built on the foundations of a clean user interface, high performance, and strict adherence to accessibility standards (WCAG).
 
-## 🛠️ Kullanılan Teknolojiler
-* **HTML5 & CSS3:** Semantik ve responsive (mobil uyumlu) sayfa iskeletleri.
-* **JavaScript (Fetch API) & JSON:** Eser verilerinin dinamik olarak sayfaya çekilmesi.
-* **Performans Optimizasyonu:** Lighthouse (Hedef %85+), Lazy Loading ve SEO uyumlu meta etiketler.
+## 🛠️ Tech Stack & Optimization
+*   **Frontend:** HTML5 & CSS3 (Semantic & Responsive design).
+*   **Dynamic Logic:** JavaScript (Fetch API) & JSON for asynchronous data loading.
+*   **Performance:** Optimized with **Lazy Loading**, SEO-friendly meta tags, and high **Google Lighthouse** targets (85%+)[cite: 1].
 
-## 👥 Ekip ve Görev Dağılımı (Paralel Çalışma Modeli)
-Bu proje, üç kişilik bir ekip tarafından paralel çalışma prensibiyle geliştirilmiştir:
+## 👥 Contributors & Collaboration
+This project was developed through a collaborative parallel-working model:
 
-* **Sena (Görsel Mimari & Navigasyon - %30):** 
-  Sitenin HTML iskeletinin kurulması, CSS ile renk/font yönetimi, mobil uyumluluk (Responsive) ve klavye erişilebilirliğinin (Focus stilleri, "İçeriğe Atla" bağlantısı) sağlanması.
-* **Ebrar (Dinamik Veri & Sistem Altyapısı - %30):** 
-  Veri yapısının (JSON) oluşturulması, içeriklerin sayfaya dinamik çekilmesi, Google Lighthouse optimizasyonu, SEO ve Lazy Loading işlemleri.
-* **Beyza (Kullanıcı Deneyimi & Etkileşim - %40):** 
-  Kullanılabilirlik akışının sağlanması, CSS mikro etkileşimleri (hover efektleri), yüksek kaliteli görsellerin yönetimi ve erişilebilirlik (alt text) metinlerinin yazılması.
+*   **[Sena Önen](https://github.com/senaOnenn) (Project Architecture & UI/UX):** Lead for HTML/CSS framework, responsive design, and WCAG accessibility standards.
+*   **[Ebrar Kılıç](https://github.com/ebrarklc):** Specialized in data infrastructure (JSON), dynamic content fetching, and SEO optimization[cite: 1].
+*   **[Beyza Demirtaş](https://github.com/BEYZADEMIRTAS):** Focused on interaction design, visual asset management, and usability flow[cite: 1].
 
-## 📂 Proje Yapısı
-* `index.html`: Dönem listesinin yer aldığı ana sayfa.
-* `period.html`: Seçilen döneme ait eserlerin listelendiği sayfa.
-* `detail.html`: Eser detaylarının (sol görsel, sağ metin) incelendiği sayfa.
-* `about.html`: Proje bilgisi ve ekip detayları.
-* `sources.html`: Akademik ve görsel kaynakça.
-* `style.css`: Tüm projenin tasarım dosyası.
-* `data.json`: Tüm eserlerin ve dönemlerin tutulduğu dinamik veri dosyası.
+## 📂 Project Structure
+*   `index.html`: Homepage featuring the list of historical eras[cite: 1].
+*   `period.html`: Artifact listing page for the selected era[cite: 1].
+*   `detail.html`: Individual artifact examination page (visuals & descriptions)[cite: 1].
+*   `about.html`: Project mission and team credentials[cite: 1].
+*   `sources.html`: Academic and visual references[cite: 1].
+*   `data.json`: The dynamic database containing all artifact and period metadata[cite: 1].
 
-## 🚀 Kurulum ve Çalıştırma
-Proje, verileri `data.json` dosyasından Fetch API ile çektiği için doğrudan HTML dosyasına çift tıklayarak açıldığında (CORS politikası nedeniyle) veriler görünmeyebilir. 
-Projeyi yerel ortamda çalıştırmak için:
-1. VS Code üzerinden projeyi açın.
-2. Eklentiler menüsünden **Live Server** eklentisini kurun.
-3. `index.html` dosyasına sağ tıklayıp **"Open with Live Server"** seçeneğine tıklayın.
+## 🚀 Installation & Local Development
+Since the project uses the **Fetch API** to retrieve data from `data.json`, opening the HTML file directly in a browser may trigger CORS policy issues. To run the project locally[cite: 1]:
+
+1.  Open the project in **VS Code**.
+2.  Install the **Live Server** extension.
+3.  Right-click on `index.html` and select **"Open with Live Server"**.
+
+---
+*Developed by Sena, Ebrar, and Beyza.*[cite: 1]
