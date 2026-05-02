@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dönem Eserleri - Sanal Dünya Müzesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Koleksiyonlar</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="back-button-container">
+        <a href="index.html" class="btn-kesfet btn-geri">
+            <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+        </a>
+    </div>
+
+    <main id="main-content">
+        <section class="hero-section" style="padding-bottom: 2rem;">
+            <div id="period-header-info">
+                <h1>Yükleniyor...</h1>
+                <p>Seçilen döneme ait eserler hazırlanıyor.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <!-- Ebrar: Statik içerik temizlendi, grid app.js ile dolacak -->
+            <div id="artifact-grid" class="grid-container"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
+            <div class="footer-links">
+                <a href="about.html">Hakkında</a> |
+                <a href="sources.html">Kaynakça</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

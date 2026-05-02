@@ -1,0 +1,270 @@
+{
+    "periods": [
+        {
+            "id": "ancient",
+            "name": "Antik Çağ",
+            "description": "Uygarlığın doğuşu ve ilk büyük eserler.",
+            "image": "resimler/evet.jpg"
+        },
+        {
+            "id": "medieval",
+            "name": "Orta Çağ",
+            "description": "Karanlıktan aydınlığa geçişin izleri.",
+            "image": "resimler/yeni2.jpg"
+        },
+        {
+            "id": "renaissance",
+            "name": "Rönesans",
+            "description": "Sanat ve bilimin yeniden doğuşu.",
+            "image": "resimler/yeni3.jpg"
+        },
+        {
+            "id": "modern",
+            "name": "Modern Çağ",
+            "description": "Endüstriyel devrimden dijital çağa.",
+            "image": "resimler/yeni5.jpg"
+        }
+    ],
+    "artifacts": [
+        {
+            "id": "1",
+            "periodId": "ancient",
+            "name": "Zeus Heykeli",
+            "image": "resimler/ZEUS.jpg",
+            "date": "MÖ 435",
+            "location": "Olympia, Yunanistan",
+            "description": "Olympia'daki dev heykel, antik dünyanın yedi harikasından biri.",
+            "history": "Dönemin en ünlü heykeltıraşı Phidias tarafından Olympia'daki Zeus Tapınağı için tasarlanan bu eser, devasa boyutlarıyla antik dünyanın yedi harikasından biri olarak tarihe geçmiştir. Yaklaşık 12 metre yüksekliğindeki heykel, sedir ağacından yapılmış dev bir iskeletin üzerine fildişi ve altın plakalar geçirilerek inşa edilmiştir. Zeus, sağ elinde zafer tanrıçası Nike'yi, sol elinde ise üzerinde kartal olan altından bir asayı tutarken tasvir edilmiştir.",
+            "significance": "Tanrıların kralı Zeus'un görkemini ve mutlak gücünü temsil eden bu eser, Yunan panteonunun sanatsal olarak ulaştığı en üst noktayı simgeler. Tapınağa giren ziyaretçilerde tanrısal bir korku ve hayranlık uyandırmak amacıyla matematiksel bir ihtişamla, neredeyse tapınağın tavanına değecek şekilde kurgulanmıştır.",
+            "museumNote": "Orijinal heykel MS 5. yüzyılda bir yangında yok olmuş olsa da, antik paralar ve metinler sayesinde günümüze ulaşan tasviri, insanlığın inancını somutlaştırma çabasının en büyük kanıtıdır."
+        },
+        {
+            "id": "2",
+            "periodId": "ancient",
+            "name": "Parthenon",
+            "image": "resimler/Parthenon.jpg",
+            "date": "MÖ 432",
+            "location": "Atina, Yunanistan",
+            "description": "Atina akropolünün simgesi ve Yunan mimarisinin şaheseri.",
+            "history": "Atina Akropolisi'nin en yüksek noktasına inşa edilen Parthenon, Pers savaşlarında kazanılan zaferin ardından şehrin koruyucu tanrıçası Athena Parthenos'a şükran amacıyla Perikles döneminde yapılmıştır. Mimarlar Iktinos ve Kallikrates ile heykeltıraş Phidias'ın ortak dehasının bir ürünüdür. Yüzyıllar boyunca tapınak, kilise, cami ve hatta baruthane olarak kullanılmıştır.",
+            "significance": "Dor düzeninin zirvesi kabul edilen yapıda kullanılan 'entasis' tekniği (sütunlardaki çok hafif şişkinlik ve merkeze doğru eğim), insan gözünün yanılmalarını düzelterek binanın kusursuz bir düzlükte görünmesini sağlar. Bu optik ve matematiksel illüzyon, antik mühendisliğin akıl almaz bir başarısıdır.",
+            "museumNote": "Demokrasinin doğduğu topraklarda yükselen bu mermer anıt, Batı medeniyetinin mimari estetiğini ve klasik sanatın altın oranını belirleyen en önemli yapıdır."
+        },
+        {
+            "id": 3,
+            "periodId": "ancient",
+            "name": "Kolezyum (Colosseum)",
+            "image": "resimler/CO.jpg",
+            "date": "MS 70-80",
+            "location": "Roma, İtalya",
+            "description": "Antik Roma'nın en büyük amfitiyatrosu olan Kolezyum, gladyatör dövüşlerine ve devasa halk gösterilerine ev sahipliği yapmıştır.",
+            "history": "İmparator Vespasianus tarafından başlatılıp oğlu Titus tarafından tamamlanan, asıl adıyla Flavianus Amfitiyatrosu, Roma İmparatorluğu'nun eğlence ve siyaset merkezidir. Açılış oyunlarının 100 gün sürdüğü ve binlerce vahşi hayvan ile gladyatörün hayatını kaybettiği bilinmektedir. Altındaki 'hypogeum' adı verilen karmaşık tünel ve asansör sistemi, arenaya aniden vahşi hayvanların ve dekorların çıkmasını sağlıyordu.",
+            "significance": "50.000'den fazla izleyiciyi taşıyabilen bu devasa yapı, kemerli mimarinin ve Roma betonunun (opus caementicium) ne kadar dayanıklı ve esnek olabileceğini tüm dünyaya kanıtlamıştır. Aynı zamanda oturma düzeniyle Roma'daki katı sınıf ayrımının fiziksel bir haritasıdır.",
+            "museumNote": "Zamana, depremlere ve taş hırsızlarına direnerek günümüze ulaşan Kolezyum, imparatorlukların yükselişi ve çöküşünü anlatan en büyük açık hava müzesidir."
+        },
+        {
+            "id": 4,
+            "periodId": "ancient",
+            "name": "Büyük Giza Sfenksi",
+            "image": "resimler/EG.jpg",
+            "date": "MÖ 2500 civarı",
+            "location": "Giza, Mısır",
+            "description": "Firavun Kefren'in yüzüne ve bir aslanın gövdesine sahip olduğuna inanılan bu devasa kireçtaşı heykel.",
+            "history": "Dünyanın en eski, en büyük ve gizemi hala tam olarak çözülememiş anıtsal heykellerinden biri olan Sfenks, Giza platosundaki tek bir devasa kireçtaşı kayasının yontulmasıyla oluşturulmuştur. Tarihçiler, yüzünün Giza'daki ikinci büyük piramidi inşa ettiren Firavun Kefren'e (Khafre) ait olduğunu düşünmektedir. Yüzyıllar boyunca gövdesi kumlar altında kalmış, bu durum onu rüzgar erozyonundan korumuştur.",
+            "significance": "Yatan bir aslan gövdesi fiziksel gücü, insan başı ise bilgeliği ve firavunun ilahi zekasını temsil eder. Doğrudan doğuya, doğan güneşe bakacak şekilde hizalanmış olması, Antik Mısır'ın Güneş Tanrısı Ra kültüyle ve ölümden sonraki yaşam inancıyla derin bağları olduğunu gösterir.",
+            "museumNote": "Mısır çöllerinin ebedi bekçisi olan Sfenks, antik çağ insanının doğayı şekillendirme ve ölümsüzlük arayışının en büyüleyici anıtıdır."
+        },
+        {
+            "id": 5,
+            "periodId": "ancient",
+            "name": "Terracotta Ordusu",
+            "image": "resimler/OR.jpg",
+            "date": "MÖ 210-209",
+            "location": "Xi'an, Çin",
+            "description": "İlk Çin İmparatoru Çin Şi Huang'ın mezarını koruması amacıyla yapılmış, binlerce gerçek boyutlu pişmiş toprak asker.",
+            "history": "1974 yılında yerel çiftçiler tarafından tesadüfen keşfedilen bu yeraltı ordusu, Çin'i ilk kez tek bir bayrak altında toplayan İmparator Qin Shi Huang'ın öbür dünyadaki gücünü koruması için inşa edilmiştir. Komplekste 8.000'den fazla asker, 130 savaş arabası, 520 at ve sivil memur heykelleri bulunmaktadır.",
+            "significance": "Bu muazzam koleksiyonun en akıl almaz özelliği, binlerce askerin hiçbirinin yüz ifadesinin, saç şeklinin veya zırh detayının diğerine benzememesidir. Bu durum, Antik Çin'in hem olağanüstü bir sanatsal disipline hem de devasa bir seri üretim ve lojistik zekasına sahip olduğunu kanıtlar.",
+            "museumNote": "Sadece bir arkeolojik buluntu değil; ölümden sonraki hayata dair duyulan inancın, toprağa işlenmiş eşsiz ve devasa bir manifestosudur."
+        },
+        {
+            "id": 6,
+            "periodId": "medieval",
+            "name": "Ayasofya Camii",
+            "image": "resimler/Aya.jpg",
+            "date": "MS 532-537",
+            "location": "İstanbul, Türkiye",
+            "description": "Bizans İmparatorluğu'nun mimari şaheseri olan Ayasofya, devasa kubbesi ve görkemli mozaikleriyle bilinir.",
+            "history": "Nika Ayaklanması'nda yıkılan eski kilisenin yerine İmparator I. Justinianus'un emriyle fizikçi Trallesli Anthemius ve matematikçi Miletli Isidoros tarafından inşa edilmiştir. O dönem için imkansız görülen bir hızla, sadece 5 yılda tamamlanan Ayasofya, yapıldığı andan itibaren bin yıl boyunca dünyanın en büyük katedrali unvanını korumuştur. 1453'te Fatih Sultan Mehmet'in İstanbul'u fethiyle camiye dönüştürülmüştür.",
+            "significance": "Mimaride bir devrim sayılan 'pandantif' sistemi kullanılarak, devasa bir dairesel kubbe kare bir taban üzerine oturtulmuştur. Kubbenin tabanına açılan 40 pencere, yapının devasa ağırlığına rağmen kubbenin havada asılı gibi görünmesini sağlar. Bizans mozaik sanatı ile Osmanlı hat sanatının kusursuz bir uyum içinde sergilendiği nadir mekanlardandır.",
+            "museumNote": "Sadece taş ve harçtan değil, iki büyük cihan imparatorluğunun, dinin ve kültürün inancından inşa edilmiş, insanlık tarihinin ortak mirasıdır."
+        },
+        {
+            "id": 7,
+            "periodId": "medieval",
+            "name": "Notre Dame Katedrali",
+            "image": "resimler/not.jpg",
+            "date": "1163 - 1345",
+            "location": "Paris, Fransa",
+            "description": "Gotik mimarinin en zarif örneği kabul edilen katedral, uçan payandaları ve gül pencereleriyle ünlüdür.",
+            "history": "Seine Nehri üzerindeki Île de la Cité adasında yükselen katedral, Paris Piskoposu Maurice de Sully'nin hayalinin ürünüdür. Yapımı neredeyse iki asır süren bu şaheser, Fransız Devrimi sırasında ciddi hasar görmüş, ancak Victor Hugo'nun ünlü romanı sayesinde halkın ilgisini yeniden çekerek 19. yüzyılda restore edilmiştir.",
+            "significance": "Mimarlık tarihinde 'uçan payanda' (flying buttress) sisteminin ilk kez bu kadar görkemli kullanıldığı yapılardan biridir. Bu dış destekler sayesinde katedralin duvarları incelebilmiş ve içeriye ilahi bir ışık süzülmesini sağlayan o ünlü devasa, renkli vitray gül pencereler eklenebilmiştir. Sivri kemerler, yapıyı gökyüzüne, yani Tanrı'ya doğru yükseltme amacını taşır.",
+            "museumNote": "Notre Dame, sadece Paris'in kalbi değil; aynı zamanda Orta Çağ Avrupası'nın zanaat, inanç ve mimari zekasının taşa kazınmış bir ansiklopedisidir."
+        },
+        {
+            "id": 8,
+            "periodId": "medieval",
+            "name": "El Hamra Sarayı",
+            "image": "resimler/gar.jpg",
+            "date": "13. Yüzyıl",
+            "location": "Granada, İspanya",
+            "description": "Endülüs Emevileri'nden kalma bu saray, İslam sanatının en ince detaylarını taşır.",
+            "history": "İber Yarımadası'ndaki son Müslüman hanedan olan Nasrîler tarafından yaptırılan El Hamra (Kızıl Kale), adını gün batımında duvarlarına vuran kızıl güneş ışıklarından alır. Dışarıdan bakıldığında sade ve aşılmaz bir kale gibi görünmesine rağmen, içeri girildiğinde birbirinden bağımsız avlular, su yolları ve bahçelerle örülü bir masal dünyası gibidir.",
+            "significance": "Sarayda figüratif resim yerine, karmaşık geometrik desenler (arabesk), Kufi hat sanatıyla yazılmış şiirler ve petek şeklindeki göz alıcı 'Mukarnas' tavanlar kullanılmıştır. Aslanlı Avlu'daki su kanalları, mühendisliğin estetikle buluştuğu noktadır; suyun sesi ve serinliği sarayın mimari bir unsuru olarak tasarlanmıştır.",
+            "museumNote": "İslam sanatının, matematikteki sonsuzluğu ve yeryüzünde bir cennet bahçesi tasvirini mimariyle nasıl birleştirdiğinin dünya üzerindeki en zarif kanıtıdır."
+        },
+        {
+            "id": 9,
+            "periodId": "medieval",
+            "name": "Mont Saint-Michel",
+            "image": "resimler/sarr.jpg",
+            "date": "8. - 16. Yüzyıl",
+            "location": "Normandiya, Fransa",
+            "description": "Denizin ortasındaki bir kaya üzerine inşa edilmiş bu manastır köyü, Orta Çağ'ın zirvesidir.",
+            "history": "Efsaneye göre Başmelek Mikail'in (St. Michael) Piskopos Aubert'e rüyasında görünmesiyle yapımına başlanan bu manastır, Fransa'nın kuzey kıyılarında benzersiz bir kayalık ada üzerine inşa edilmiştir. Yüzyıl Savaşları sırasında İngiliz kuşatmalarına direnmiş, Fransız Devrimi sonrasında ise bir süre hapishane olarak kullanılmıştır.",
+            "significance": "Avrupa'nın en büyük gelgitlerinin yaşandığı bir bölgede yer alan ada, sular yükseldiğinde karadan tamamen koparak doğal bir savunma kalkanı oluşturur. En tepedeki Gotik manastırın altında sırasıyla devasa salonlar, depolar ve en altta balıkçı köyünün evleri yer alır. Bu dikey yapılaşma, Orta Çağ feodal toplumunun mimariye yansımış halidir.",
+            "museumNote": "Doğanın zorlu koşullarına boyun eğmek yerine onunla uyum içinde yükselen bu yapı, insan azminin ve ruhani adanmışlığın en mistik sembolüdür."
+        },
+        {
+            "id": 10,
+            "periodId": "medieval",
+            "name": "Bayeux İşlemesi",
+            "image": "resimler/Bayeux.jpg",
+            "date": "1070 civarı",
+            "location": "Bayeux, Fransa",
+            "description": "70 metre uzunluğundaki bu devasa nakış, Normanların İngiltere'yi fethini anlatır.",
+            "history": "Normandiya Dükü William'ın (Fatih William) 1066 yılında İngiltere'yi fethedişini ve ünlü Hastings Savaşı'nı anlatan bu eser, aslında bir halı veya goblen değil, keten kumaş üzerine yün iplikle işlenmiş devasa bir nakıştır. Dönemin okuma yazma bilmeyen halkına olayları anlatmak için Piskopos Odo tarafından sipariş edildiği düşünülmektedir.",
+            "significance": "Üzerinde 600'den fazla insan, 200 at, onlarca gemi ve fantastik canavar figürü bulunur. Halley Kuyruklu Yıldızı'nın bile resmedildiği bu eser, 11. yüzyıl Avrupası'ndaki askeri taktikler, gemi yapımı, zırhlar ve günlük yaşam hakkında paha biçilmez bir görsel tarih kaynağıdır.",
+            "museumNote": "Tarihin sadece kazananlar tarafından yazılmadığını, aynı zamanda iğne ve iplikle ilmek ilmek işlenerek dev bir 'çizgi romana' dönüştürülebileceğini gösteren eşsiz bir belgedir."
+        },
+        {
+            "id": 11,
+            "periodId": "renaissance",
+            "name": "Mona Lisa",
+            "image": "resimler/mona.jpg",
+            "date": "1503 - 1506",
+            "location": "Louvre Müzesi, Paris",
+            "description": "Leonardo da Vinci'nin dünyaca ünlü portresi. Sfumato tekniği ve gizemli gülümsemesiyle bilinir.",
+            "history": "Rönesans'ın evrensel dehası Leonardo da Vinci tarafından Floransalı ipek tüccarı Francesco del Giocondo'nun eşi Lisa Gherardini'nin portresi olarak başlanmıştır. Ancak Leonardo, tabloyu asla sipariş sahibine teslim etmemiş, hayatı boyunca gittiği her yere yanında götürerek tablo üzerinde çalışmaya devam etmiştir. 1911'de Louvre'dan çalınması, onu dünyanın en tanınmış sanat eseri haline getiren sürecin başlangıcıdır.",
+            "significance": "Resim sanatında devrim yaratan 'Sfumato' (İtalyanca duman gibi) tekniği sayesinde fırça izleri ve keskin çizgiler tamamen yok edilmiş, renkler birbirinin içinde eritilmiştir. Bu teknik, Mona Lisa'nın ruh halinin anlaşılamaz, gülümsemesinin ise sürekli değişiyormuş gibi görünmesini sağlar. Arka plandaki atmosferik perspektif, insan ile doğa arasındaki felsefi bağı vurgular.",
+            "museumNote": "Baktığınız açıya göre değişen ifadesiyle Mona Lisa, sadece bir kadının portresi değil, Leonardo'nun insan anatomisine ve optik bilimine duyduğu tutkunun tuvaldeki yansımasıdır."
+        },
+        {
+            "id": 12,
+            "periodId": "renaissance",
+            "name": "Davut Heykeli",
+            "image": "resimler/davutt.jpg",
+            "date": "1501 - 1504",
+            "location": "Akademi Galerisi, Floransa",
+            "description": "Michelangelo'nun mermerden yonttuğu bu devasa heykel, insan vücudunun mükemmelliğini simgeler.",
+            "history": "Daha önce başka heykeltıraşlar tarafından 'işe yaramaz' denilerek yıllarca yağmur altında terk edilmiş devasa bir Carrara mermeri bloğundan yontulmuştur. Sadece 26 yaşında olan Michelangelo, İncil'deki genç Davut'un dev Goliath ile savaşmadan hemen önceki gergin ve konsantre anını tasvir etmiştir. Eser, Floransa Cumhuriyeti'nin, etrafındaki güçlü düşmanlara karşı bağımsızlığının siyasi bir sembolü haline gelmiştir.",
+            "significance": "5 metreyi aşan bu devasa heykel, insan anatomisinin mutlak bir şaheseridir. Davut'un sağ elinin üstündeki belirgin damarlar, boynundaki gergin kaslar ve gözlerindeki kararlı bakış, 'Kontrapposto' (ağırlığın tek bir bacağa bindirildiği) duruşuyla kusursuz bir dengeye ulaşır. Rönesans'ın hümanist 'ideal insan' kavramının doruk noktasıdır.",
+            "museumNote": "Soğuk ve cansız bir mermerin nasıl nefes alan, kalbi atan ve düşünen bir insana dönüştürülebileceğinin insanlık tarihindeki en büyük kanıtıdır."
+        },
+        {
+            "id": 13,
+            "periodId": "renaissance",
+            "name": "Atina Okulu",
+            "image": "resimler/okul.jpg",
+            "date": "1509 - 1511",
+            "location": "Vatikan Müzeleri",
+            "description": "Raffaello'nun bu freski, antik dünyanın filozoflarını Rönesans'ın perspektifiyle buluşturur.",
+            "history": "Papa II. Julius'un Vatikan Sarayı'ndaki özel kütüphanesi (Stanza della Segnatura) için Raffaello Sanzio tarafından yapılmış muazzam bir duvar resmidir (fresk). Rönesans ruhunun en büyük özelliği olan Antik Yunan ve Roma felsefesine yeniden duyulan hayranlığın görsel bir manifestosudur. Tarih boyunca yaşamış en büyük düşünürleri, tek bir antik tapınak mekanında bir araya getirir.",
+            "significance": "Merkezde felsefenin iki zıt kutbu yer alır: Platon parmağıyla gökyüzünü (idealizmi ve soyut dünyayı) işaret ederken, öğrencisi Aristoteles elini yere doğru (realizmi ve gözlemlenebilir dünyayı) uzatır. Raffaello, kusursuz bir merkezi perspektif kullanarak izleyiciyi resmin içine çeker. Ayrıca Platon'u çizerken Leonardo da Vinci'den, ön plandaki melankolik Herakleitos'u çizerken ise Michelangelo'dan ilham alarak döneminin ustalarına saygı duruşunda bulunmuştur.",
+            "museumNote": "Bilgi, akıl, sanat ve bilimin, Rönesans çağının coşkusuyla tek bir karede dondurulmuş halidir."
+        },
+        {
+            "id": 14,
+            "periodId": "renaissance",
+            "name": "Venüs'ün Doğuşu",
+            "image": "resimler/kiz.jpg",
+            "date": "1485 civarı",
+            "location": "Uffizi Galerisi, Floransa",
+            "description": "Botticelli'nin bu zarif tablosu, antik mitolojinin yeniden yorumlanmasıdır.",
+            "history": "Sandro Botticelli tarafından muhtemelen güçlü Medici ailesi için boyanmış olan bu tablo, Antik Roma yazar Ovidius'un mitolojik metinlerinden ilham alır. Eser, aşk ve güzellik tanrıçası Venüs'ün deniz köpüğünden doğarak, rüzgar tanrıları Zephyrus ve Aura'nın nefesiyle bir deniz kabuğu üzerinde Kıbrıs kıyılarına sürüklenişini lirik bir şekilde anlatır.",
+            "significance": "Orta Çağ boyunca sanatta sadece dini temalar (İsa ve Meryem) işlenirken, bu eser devasa boyutlarda çıplak bir mitolojik figürü merkezine alan ilk büyük tablodur. Anatomik gerçeklikten ziyade zarafete ve şiirsel bir güzelliğe odaklanılmıştır. Venüs'ün uzatılmış boynu ve omuzları, Rönesans'ın Floransa'daki 'Neoplatonik' düşünce yapısını, yani fiziksel güzelliğin ilahi güzelliğe ulaşmada bir araç olduğu fikrini yansıtır.",
+            "museumNote": "Sanatın dinsel dogmalardan sıyrılıp, mitolojik hayal gücüyle özgürleştiği ve estetiğin kendi başına bir değer olduğu dönüm noktalarından biridir."
+        },
+        {
+            "id": 15,
+            "periodId": "renaissance",
+            "name": "Floransa Katedrali Kubbesi",
+            "image": "resimler/rone.jpg",
+            "date": "1420 - 1436",
+            "location": "Floransa, İtalya",
+            "description": "Brunelleschi'nin devrim niteliğindeki kubbe tasarımı, mimaride modern çağın başlangıcıdır.",
+            "history": "Floransa Katedrali'nin (Duomo) inşasına başlanmış, ancak kilisenin ortasındaki 44 metrelik devasa boşluğun nasıl kapatılacağını kimse bulamadığı için katedral yıllarca çatısız kalmıştı. Saat ustası ve kuyumcu olan Filippo Brunelleschi, açılan yarışmayı kazanarak o güne kadar imkansız görülen bir çözüm sundu ve Rönesans mühendisliğinin temelini attı.",
+            "significance": "Brunelleschi, yere devasa tahta iskeleler kurmak yerine, iç içe geçen iki farklı kubbe kabuğu tasarladı. Tuğlaları 'balıksırtı' (herringbone) adı verilen özel bir desenle örerek kubbenin kendi kendini taşımasını sağladı. Ayrıca 4 milyon tuğlayı yukarı taşımak için tarihteki ilk tersinir vitesli öküz vinci (ox-hoist) gibi devrim niteliğinde makineler icat etti.",
+            "museumNote": "İnsanoğlunun aklını ve matematiği kullanarak doğanın yerçekimi kurallarına meydan okumasının ve Orta Çağ karanlığından sıyrılmasının en görkemli zaferidir."
+        },
+        {
+            "id": 16,
+            "periodId": "modern",
+            "name": "Eyfel Kulesi",
+            "image": "resimler/eyyfel.jpg",
+            "date": "1889",
+            "location": "Paris, Fransa",
+            "description": "Modern Çağ'ın başlangıcının simgesi olan bu demir dev, endüstri devriminin gücünü ilan etmiştir.",
+            "history": "Fransız Devrimi'nin 100. yıl dönümünü kutlamak amacıyla düzenlenen 1889 Dünya Fuarı'nın giriş kapısı olarak mühendis Gustave Eiffel tarafından tasarlanmıştır. İnşası sırasında aralarında Alexandre Dumas ve Guy de Maupassant'ın da bulunduğu dönemin ünlü sanatçıları tarafından 'korkunç bir demir yığını' ve 'şehrin üzerinde kara bir leke' olarak nitelendirilerek protesto edilmiştir.",
+            "significance": "Eyfel, modern mimarinin süsten, taştan ve mermerden arınarak malzemenin (demirin) kendi çıplak formunu estetik bir unsur olarak sunduğu ilk büyük yapıttır. 18.000 ayrı demir parçasının 2.5 milyon perçinle birleştirildiği 300 metrelik bu kule, o dönemde dünyanın en yüksek yapısı unvanını almış ve endüstri devriminin mühendislikteki kusursuzluğunu kanıtlamıştır.",
+            "museumNote": "Başta fuar sonrası sökülmesi planlanan bu geçici yapı, bugün sadece Paris'in değil, sarsılmaz bir kararlılığın ve yenilikçi modernizmin dünya çapındaki ikonudur."
+        },
+        {
+            "id": 17,
+            "periodId": "modern",
+            "name": "Sydney Opera Evi",
+            "image": "resimler/sydney.jpg",
+            "date": "1959 - 1973",
+            "location": "Sydney, Avustralya",
+            "description": "Modern mimarinin en tanınmış yapılarından biri olan bu eser, yelkenleri andıran kabuk yapısıyla bilinir.",
+            "history": "Danimarkalı mimar Jørn Utzon'un 1957'de kazandığı uluslararası yarışma ile başlayan süreç, dönemin bilgisayar ve inşaat teknolojilerinin çok ötesinde olduğu için tam 14 yıl sürmüş ve bütçesinin 14 katına mal olmuştur. Utzon'un masasında portakal kabuklarını keserken bulduğu geometrik çözüm, binanın inşasını mümkün kılan dönüm noktası olmuştur.",
+            "significance": "Binanın üzerindeki beyaz beton kabuklar, limandaki yatların yelkenlerini veya devasa deniz kabuklarını andıran dışavurumcu (ekspresyonist) bir tasarıma sahiptir. Mimarinin, tıpkı içinde sergilenen sanat eserleri gibi, kentin kimliğini tanımlayan heykelsi bir forma dönüşebileceğinin en güçlü kanıtıdır. Üzeri 1 milyondan fazla İsveç seramik karosu ile kaplıdır.",
+            "museumNote": "Zorluklara ve siyasi krizlere rağmen hayata geçirilen bu proje, vizyoner bir hayalin mühendislik sınırlarını nasıl genişlettiğini anlatan modern bir efsanedir."
+        },
+        {
+            "id": 18,
+            "periodId": "modern",
+            "name": "Atomium",
+            "image": "resimler/atomm.jpg",
+            "date": "1958",
+            "location": "Brüksel, Belçika",
+            "description": "Bir demir kristalinin 165 milyar kez büyütülmüş hali olan bu yapı, atom çağını simgeler.",
+            "history": "Mühendis André Waterkeyn tarafından 1958 Brüksel Dünya Fuarı (Expo 58) için özel olarak tasarlanmıştır. İkinci Dünya Savaşı'nın yıkıcı etkilerinden sonra, bilime duyulan güvenin yeniden yeşerdiği 'Uzay Çağı' ve 'Atom Çağı' optimizminin bir ürünüdür.",
+            "significance": "Yapı, birbirine devasa tüplerle bağlanan 9 çelik küreden oluşur ve temel bir demir kristali hücresinin mikroskobik yapısını 165 milyar kat büyüterek sergiler. Kürelerin içinde yürüyen merdivenler ve sergi alanları bulunur. Mimari ile fiziği birleştiren bu sıra dışı tasarım, nükleer enerjinin silah olarak değil, barışçıl ve insanlığın faydasına bir enerji kaynağı olarak kullanılması gerektiği mesajını verir.",
+            "museumNote": "Fütüristik tasarımıyla Atomium, 20. yüzyıl ortalarında insanlığın bilime, teknolojiye ve aydınlık bir geleceğe duyduğu sarsılmaz inancın paslanmaz bir anıtıdır."
+        },
+        {
+            "id": 19,
+            "periodId": "modern",
+            "name": "Guggenheim Müzesi",
+            "image": "resimler/Guggenheim.jpg",
+            "date": "1997",
+            "location": "Bilbao, İspanya",
+            "description": "Frank Gehry'nin titanyum kaplı bu tasarımı, dekonstrüktivizm akımının en önemli temsilcisidir.",
+            "history": "İspanya'nın Nervion Nehri kıyısında, ekonomik olarak çökmekte olan sanayi şehri Bilbao'yu yeniden canlandırmak amacıyla inşa edilmiştir. Kanadalı-Amerikalı mimar Frank Gehry tarafından tasarlanan bu müze, açıldığı andan itibaren o kadar büyük bir küresel ilgi görmüştür ki, bir mimari eserin koca bir şehrin ekonomisini ve kaderini değiştirmesi literatüre 'Bilbao Etkisi' olarak geçmiştir.",
+            "significance": "Dekonstrüktivizm (yapısal söküm) akımının şaheseri olan bina, dik açıları, simetriyi ve geleneksel kuralları tamamen reddeder. Havacılık endüstrisinde kullanılan CATIA isimli özel bir yazılım olmadan bu eğrisel formların inşa edilmesi imkansızdı. Dış cephesindeki 33.000 ince titanyum panel, günün saatine ve hava durumuna göre renk değiştirerek adeta nefes alan organik bir canlı izlenimi yaratır.",
+            "museumNote": "Sadece bir müze binası değil, dijital çağın tasarım özgürlüğünü somutlaştıran ve 21. yüzyıl mimarisinin yönünü çizen devasa bir modern çağ heykelidir."
+        },
+        {
+            "id": 20,
+            "periodId": "modern",
+            "name": "Louvre Piramidi",
+            "image": "resimler/louvre.jpg",
+            "date": "1989",
+            "location": "Paris, Fransa",
+            "description": "Klasik ve modernin buluşması. Cam ve çelikten oluşan bu yapı, ışıkla olan danstır.",
+            "history": "Fransa Cumhurbaşkanı François Mitterrand'ın 'Büyük Louvre' projesi kapsamında, Çin asıllı Amerikalı mimar I. M. Pei tarafından tasarlanmıştır. Paris'in kalbinde, Rönesans ve Barok dönemlerinden kalma tarihi Louvre Sarayı'nın avlusuna devasa bir modern cam piramit dikme fikri, ilk başlarda büyük bir kültürel şok ve yoğun tartışmalar yaratmıştır.",
+            "significance": "Piramidin temel amacı, karanlık ve karmaşık olan müze girişini devasa bir yeraltı lobisine dönüştürmek ve içeriye gün ışığını taşımaktır. Cam ve çelik konstrüksiyon, firavunların taş piramitlerinin oranlarını kopyalarken ağırlıksız, şeffaf ve minimalist bir estetik sunar. Geçmişin ağır tarihi dokusu ile modern çağın teknolojik şeffaflığı arasında zıt ama bir o kadar da saygılı bir diyalog kurar.",
+            "museumNote": "Sanat tarihinin en büyük mirasını barındıran sarayın kalbine saplanmış modern bir elmas gibi, eskinin ve yeninin muazzam bir cesaretle kucaklaşmasıdır."
+        }
+    ]
+}

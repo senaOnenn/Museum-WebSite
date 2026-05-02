@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eser Detayı - Sanal Dünya Müzesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Koleksiyonlar</a></li>
+                <li><a href="about.html">Hakkında</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" class="container" style="padding-top: 4rem;">
+
+        <div class="back-navigation">
+            <a href="javascript:history.back()" class="btn-back">← Geri Dön</a>
+        </div>
+
+        <article id="artifact-detail" class="detail-layout">
+
+            <div class="detail-image">
+                <!-- Ebrar: ID eklendi -->
+                <img src="" alt="Yükleniyor..." id="artifact-img" loading="lazy">
+            </div>
+
+            <div class="detail-content">
+                <!-- Ebrar: ID'ler app.js ile uyumlu -->
+                <h1 id="artifact-title" class="serif-title">Eser Adı</h1>
+
+                <div class="artifact-meta">
+                    <p><strong>Tarih:</strong> <span id="artifact-date">...</span></p>
+                    <p><strong>Konum:</strong> <span id="artifact-location">...</span></p>
+                </div>
+
+                <div class="artifact-description">
+                    <p id="artifact-desc">Açıklama yükleniyor...</p>
+                </div>
+
+                <div id="multimedia-container" class="multimedia-area"></div>
+            </div>
+
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
+            <div class="footer-links">
+                <a href="about.html">Hakkında</a> |
+                <a href="sources.html">Kaynakça</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
