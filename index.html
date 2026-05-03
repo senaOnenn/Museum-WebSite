@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dönemlerin İzinde: Sanal Dünya Müzesi</title>
-    
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <a href="#main-content" class="skip-link">İçeriğe Atla</a>
@@ -29,63 +31,21 @@
             </div>
         </section>
 
-        <section id="period-grid" class="container">
-            
-            <article class="period-card">
-                <div class="image-wrapper">
-                    <img src="assets/images/ancient.jpg" alt="Antik Çağ Eserleri">
-                </div>
-                <div class="card-info">
-                    <h2>Antik Çağ</h2>
-                    <p>Uygarlığın doğuşu ve ilk büyük eserler.</p>
-                    <a href="period.html?id=ancient" class="explore-link">Keşfet →</a>
-                </div>
-            </article>
-
-            <article class="period-card">
-                <div class="image-wrapper">
-                    <img src="assets/images/medieval.jpg" alt="Orta Çağ Mimarisi">
-                </div>
-                <div class="card-info">
-                    <h2>Orta Çağ</h2>
-                    <p>Karanlıktan aydınlığa geçişin izleri.</p>
-                    <a href="period.html?id=medieval" class="explore-link">Keşfet →</a>
-                </div>
-            </article>
-
-            <article class="period-card">
-                <div class="image-wrapper">
-                    <img src="assets/images/renaissance.jpg" alt="Rönesans Sanatı">
-                </div>
-                <div class="card-info">
-                    <h2>Rönesans</h2>
-                    <p>Sanat ve bilimin yeniden doğuşu.</p>
-                    <a href="period.html?id=renaissance" class="explore-link">Keşfet →</a>
-                </div>
-            </article>
-
-            <article class="period-card">
-                <div class="image-wrapper">
-                    <img src="assets/images/modern.jpg" alt="Modern Sanat Eseri">
-                </div>
-                <div class="card-info">
-                    <h2>Modern Çağ</h2>
-                    <p>Endüstriyel devrimden dijital çağa.</p>
-                    <a href="period.html?id=modern" class="explore-link">Keşfet →</a>
-                </div>
-            </article>
-
-            </section>
+        <!-- Ebrar: Statik article etiketleri silindi, app.js burayı dolduracak -->
+        <section id="period-grid" class="container"></section>
     </main>
 
     <footer class="footer">
         <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza [cite: 18, 243]</p>
+            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
             <div class="footer-links">
-                <a href="about.html">Kaynakça</a>
+                <a href="about.html">Hakkında</a> |
+                <a href="sources.html">Kaynakça</a>
             </div>
         </div>
     </footer>
 
-    </body>
+    <script src="app.js"></script>
+</body>
+
 </html>

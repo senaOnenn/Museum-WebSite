@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eser Detayı - Sanal Dünya Müzesi</title>
-    
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <a href="#main-content" class="skip-link">İçeriğe Atla</a>
@@ -22,47 +23,48 @@
     </header>
 
     <main id="main-content" class="container" style="padding-top: 4rem;">
-        
+
         <div class="back-navigation">
-            <a href="javascript:history.back()" class="btn-back">← Döneme Geri Dön</a>
+            <a href="javascript:history.back()" class="btn-back">← Geri Dön</a>
         </div>
 
         <article id="artifact-detail" class="detail-layout">
-            
+
             <div class="detail-image">
-                <img src="assets/images/monalisa-large.jpg" alt="Mona Lisa Tablosu" id="artifact-img" loading="lazy">
+                <!-- Ebrar: ID eklendi -->
+                <img src="" alt="Yükleniyor..." id="artifact-img" loading="lazy">
             </div>
 
             <div class="detail-content">
-                <h1 id="artifact-title" class="serif-title">Mona Lisa</h1>
-                
+                <!-- Ebrar: ID'ler app.js ile uyumlu -->
+                <h1 id="artifact-title" class="serif-title">Eser Adı</h1>
+
                 <div class="artifact-meta">
-                    <p><strong>Tarih:</strong> <span id="artifact-date">1503</span></p>
-                    <p><strong>Konum:</strong> <span id="artifact-location">Louvre Müzesi, Paris</span></p>
-                </div>
-                
-                <div class="artifact-description">
-                    <p id="artifact-desc">
-                        Rönesans döneminin en tanınmış eserlerinden biri olan Mona Lisa, Leonardo da Vinci tarafından kavak bir pano üzerine sfumato tekniği ile resmedilmiştir...
-                    </p>
+                    <p><strong>Tarih:</strong> <span id="artifact-date">...</span></p>
+                    <p><strong>Konum:</strong> <span id="artifact-location">...</span></p>
                 </div>
 
-                <div id="multimedia-container" class="multimedia-area">
-                    </div>
+                <div class="artifact-description">
+                    <p id="artifact-desc">Açıklama yükleniyor...</p>
+                </div>
+
+                <div id="multimedia-container" class="multimedia-area"></div>
             </div>
-            
+
         </article>
     </main>
 
     <footer class="footer">
         <div class="container">
             <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
-            <div class = "footer-links">
+            <div class="footer-links">
                 <a href="about.html">Hakkında</a> |
                 <a href="sources.html">Kaynakça</a>
             </div>
         </div>
     </footer>
 
-    </body>
+    <script src="app.js"></script>
+</body>
+
 </html>
