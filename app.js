@@ -77,32 +77,30 @@ function renderDetail(artifacts, artId) {
         document.title = `${art.name} | Müze Koleksiyonu`;
         const detailArea = document.getElementById('artifact-detail');
 
+        // app.js içindeki renderDetail fonksiyonunun içi
         detailArea.innerHTML = `
-            <div class="kusursuz-ortali-duzen">
-                <div class="sol-bilgi-alani">
-                    <div class="eser-kunyesi">${art.date} — ${art.location}</div>
-                    <h1 class="eser-ana-baslik">${art.name}</h1>
-                    
-                    <div class="profesyonel-metin-blogu">
-                        <h3>Tarihsel Arka Plan</h3>
-                        <p>${art.history}</p>
-                    </div>
-
-                    <div class="profesyonel-metin-blogu">
-                        <h3>Eserin Önemi</h3>
-                        <p>${art.significance}</p>
-                    </div>
-
-                    <div class="profesyonel-metin-blogu">
-                        <h3>Müze Notu</h3>
-                        <p>${art.museumNote}</p>
-                    </div>
-                </div>
-
-                <div class="sag-gorsel-alani">
-                    <img src="${art.image}" alt="${art.name}">
-                </div>
+    <div class="detail-layout">
+        <!-- SOL TARAF: METİN KUTUSU -->
+        <div class="detail-content">
+            <div class="eser-kunyesi">${art.date} — ${art.location}</div>
+            <h1 class="eser-ana-baslik">${art.name}</h1>
+            
+            <div class="profesyonel-metin-blogu">
+                <h3>Tarihsel Arka Plan</h3>
+                <p>${art.history || art.description}</p>
             </div>
-        `;
+
+            <div class="profesyonel-metin-blogu">
+                <h3>Eserin Önemi</h3>
+                <p>${art.significance || 'Bu eser döneminin en nadide parçalarından biridir.'}</p>
+            </div>
+        </div>
+
+        <!-- SAĞ TARAF: RESİM KUTUSU -->
+        <div class="detail-image">
+            <img src="${art.image}" alt="${art.name}">
+        </div>
+    </div>
+`;
     }
 }

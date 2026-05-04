@@ -1,19 +1,14 @@
 /* =========================================
    DÖNEMLERİN İZİNDE - STYLE.CSS
+   SENA'NIN İSKELETİ & BEYZA'NIN UX DOKUNUŞLARI
    ========================================= */
 
 /* --- TEMEL AYARLAR VE RENKLER --- */
 :root {
-    --bg-color: #F5F2EE;
-    --text-color: #1a1714;
+    --bg-color: #F8F9FA;
+    --text-color: #212529;
     --card-bg: #FFFFFF;
-    --accent-color: #c4622d;
-    --accent-dark: #9e4a1f;
-    --accent-light: #f0ddd2;
-    --border-color: #e8e2da;
-    --muted-text: #6b6560;
-    --font-display: 'Cormorant Garamond', Georgia, serif;
-    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+    --accent-color: #C5A059;
 }
 
 html {
@@ -27,13 +22,13 @@ html {
 }
 
 body {
-    font-family: var(--font-body);
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* --- ERİŞİLEBİLİRLİK --- */
+/* --- ERİŞİLEBİLİRLİK (SKIP LINK & FOCUS) --- */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -41,30 +36,41 @@ body {
     background: var(--accent-color);
     color: white;
     padding: 8px;
-    z-index: 100;
+    z-index: 10000;
     text-decoration: none;
+    transition: top 0.3s;
 }
 
-.skip-link:focus { top: 0; }
+.skip-link:focus {
+    top: 0;
+}
 
-a:focus, button:focus {
-    outline: 2px solid var(--accent-color);
+a:focus,
+button:focus {
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
 
 /* --- NAVİGASYON (HEADER) --- */
+/* --- NAVİGASYON (HEADER) - BUZLU CAM EFEKTİ --- */
+/* --- NAVİGASYON (HEADER) - BUZLU CAM EFEKTİ --- */
 .main-header {
-    background-color: rgba(245, 242, 238, 0.95);
+    /* Hafif taş grisi tonlarında ve %85 şeffaf arka plan */
+    background-color: rgba(235, 238, 240, 0.85);
+
+    /* Arkadan geçen resmi flulaştıran o sihirli kod (Buzlu cam) */
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    padding: 0 40px;
-    border-bottom: 1px solid var(--border-color);
+    /* Safari tarayıcılar için */
+
+    padding: 20px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    /* Yumuşak bir alt gölge */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    /* Çok ince şık bir parlama çizgisi */
     position: sticky;
     top: 0;
-    z-index: 100;
-    height: 64px;
-    display: flex;
-    align-items: center;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -72,609 +78,487 @@ a:focus, button:focus {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    width: 100%;
     margin: 0 auto;
 }
 
+/* --- LOGO TASARIMI - ZARİF VE KURUMSAL --- */
 .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    font-family: 'Georgia', serif;
+    /* Müze ciddiyeti için tırnaklı font */
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #2c3e50;
+    /* Koyu, asil bir mermer grisi */
     text-decoration: none;
-    color: inherit;
-}
-
-.logo-icon {
-    font-size: 1.3rem;
-    color: var(--accent-color);
-    line-height: 1;
-}
-
-.logo-text {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    font-weight: 500;
-    letter-spacing: 3px;
-    color: var(--text-color);
+    /* O çirkin alt çizgiyi tamamen sildik */
+    letter-spacing: 4px;
+    /* Harf aralarını açarak premium bir hava kattık */
     text-transform: uppercase;
+    /* Tamamı büyük harf ile marka duruşu */
+    transition: all 0.3s ease;
+    display: inline-block;
+    border-left: 4px solid var(--accent-color);
+    /* Soluna ince bir altın çizgi */
+    padding-left: 15px;
 }
+
+
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 8px;
-    align-items: center;
+    gap: 20px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--muted-text);
-    font-weight: 400;
-    font-size: 0.9rem;
-    transition: color 0.2s;
-    padding: 6px 14px;
-    border-radius: 20px;
-    letter-spacing: 0.3px;
-}
-
-.nav-links a:hover {
     color: var(--text-color);
-    background-color: rgba(0,0,0,0.05);
+    font-weight: 500;
+    transition: color 0.2s, border-bottom 0.2s;
+    padding-bottom: 5px;
 }
 
+.nav-links a:hover,
 .nav-links a.active {
     color: var(--accent-color);
-    background-color: var(--accent-light);
-    font-weight: 500;
+    border-bottom: 2px solid var(--accent-color);
 }
 
-/* --- HERO ALANI --- */
+/* --- ANA SAYFA VE DİĞER SAYFALAR İÇİN KAHRAMAN ALANI (HERO) --- */
 .hero-section {
-    position: relative;
-    background-image: url('resimler/Anasayfa.jpg');
     background-size: cover;
-    background-position: center 30%;
-    min-height: 88vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 40px;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(10, 8, 5, 0.62);
+/* BEYZA'NIN 0.3 ve 0.4 NETLİK AYARIYLA SAYFALARA ÖZEL RESİMLER */
+.hero-anasayfa {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('resimler/17.jpg');
+}
+
+.hero-hakkinda {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('resimler/ANTIK.jpg');
+}
+
+.hero-koleksiyon {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('resimler/Bayeux.jpg');
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 760px;
-    width: 100%;
-    padding: 0 40px;
-    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-.hero-tag {
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-family: 'Georgia', serif;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #f1f1f1;
+    margin-bottom: 20px;
+}
+
+/* --- BUTON TASARIMLARI --- */
+.btn-hero {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #e67e22;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn-hero:hover {
+    background-color: #d35400;
+    transform: translateY(-3px);
+}
+
+.btn-kesfet,
+.btn-back {
     display: inline-flex;
+    /* Margin'in düzgün çalışması için önemli */
     align-items: center;
-    gap: 8px;
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
+    padding: 8px 18px;
+
+    /* Üstten ve alttan 15px boşluk ekledim, ihtiyacına göre değiştirebilirsin */
+    margin: 15px 0;
+
     color: var(--accent-color);
-    background: rgba(196, 98, 45, 0.15);
-    border: 1px solid rgba(196, 98, 45, 0.35);
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 28px;
-}
-
-.hero-content h1 {
-    font-family: var(--font-display);
-    font-size: clamp(3.2rem, 6vw, 5rem);
+    text-decoration: none;
     font-weight: 600;
-    line-height: 1.0;
-    color: #ffffff;
-    margin-bottom: 24px;
-    letter-spacing: -0.5px;
+    border: 1.5px solid var(--accent-color);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: transparent;
+    width: fit-content;
+    cursor: pointer;
 }
 
-.hero-content h1 em {
+.btn-kesfet:hover,
+.btn-back:hover {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+/* --- SPOTLIGHT & KÜRATÖR NOTU --- */
+.curator-note {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    text-align: center;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.curator-note .signature {
     font-style: italic;
-    color: #d4956a;
-    font-weight: 400;
+    color: var(--accent-color);
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.hero-content > p {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.72);
-    margin-bottom: 40px;
-    font-weight: 300;
-    max-width: 500px;
-    line-height: 1.7;
-    margin-left: auto;
-    margin-right: auto;
+.spotlight {
+    max-width: 1000px;
+    margin: 10px auto 50px auto;
+    padding: 0 20px;
 }
 
-/* İstatistikler */
-.hero-stats {
+.spotlight-card {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 24px;
-    margin-bottom: 44px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    max-height: 350px;
 }
 
-.stat {
+.spotlight-card img {
+    width: 40%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.spotlight-info {
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    justify-content: center;
+    overflow-y: auto;
 }
 
-.stat-num {
-    font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 600;
-    color: #ffffff;
-    line-height: 1;
+.spotlight-info .quote {
+    font-style: italic;
+    border-left: 4px solid var(--accent-color);
+    padding-left: 10px;
+    margin: 10px 0;
+    color: #555;
+    font-size: 0.95rem;
 }
 
-.stat-label {
-    font-size: 0.72rem;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.5);
-    font-weight: 400;
-}
-
-.stat-divider {
-    width: 1px;
-    height: 36px;
-    background: rgba(255,255,255,0.2);
-}
-
-/* Buton */
-.hero-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 14px 28px;
-    background: var(--accent-color);
-    color: white;
-    font-weight: 500;
-    font-size: 0.9rem;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background 0.25s, transform 0.2s;
-    letter-spacing: 0.3px;
-}
-
-.hero-btn i {
-    font-size: 0.8rem;
-    transition: transform 0.3s;
-}
-
-.hero-btn:hover {
-    background: var(--accent-dark);
-    transform: translateY(-2px);
-}
-
-.hero-btn:hover i {
-    transform: translateY(3px);
-}
-
-/* --- KARTLAR İÇİN IZGARA --- */
+/* --- KARTLAR İÇİN IZGARA (GRID) --- */
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    display: block;
 }
 
-/* --- KART MİKRO ETKİLEŞİMLER --- */
-#period-grid div,
-.card,
+#period-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+/* --- KART TASARIMLARI VE HOVER --- */
 .period-card {
     background-color: var(--card-bg);
-    border-radius: 10px;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
-    border: 1px solid var(--border-color);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
 }
 
-#period-grid div:hover,
-.card:hover,
 .period-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* --- RESİMLER --- */
-#period-grid img,
-.card img,
 .period-card img {
     width: 100%;
-    height: 250px;
+    height: 200px;
     object-fit: cover;
-    display: block;
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 1px solid #EEE;
 }
 
+.card-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.card-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+/* UX: Öne Çıkan & Eser Sayısı */
+.highlight {
+    color: #d35400;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+.eser-count {
+    color: #999;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+/* --- ESER DETAY SAYFASI FİNAL DOKUNUŞU --- */
+.detail-layout {
+    justify-content: center;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    /* Ekranı tam ortadan ikiye böler */
+    gap: 50px;
+    /* Metin ve resim arasındaki nefes boşluğu */
+    max-width: 1200px;
+    /* Sayfanın sağa sola sonsuz gitmesini engeller */
+    margin: 40px auto;
+    /* Sayfayı ekrana ortalar */
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    align-items: start;
+    /* İçerikleri yukarıdan aynı hizada başlatır */
+    overflow: hidden;
+    /* Dışarı taşmaları engeller */
+}
+
+.detail-content {
+    /* Metin alanı */
+    padding-right: 20px;
+    /* Resme çok yapışmasın */
+}
+
+.detail-content .eser-ana-baslik {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    line-height: 1.2;
+}
+
+.detail-image {
+    /* Resim alanı */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.detail-image img {
+    width: 100%;
+    /* Kutunun genişliğine uy */
+    max-width: 550px;
+    /* Resmin aşırı büyümesini engelle */
+    height: 500px;
+    /* Boyu sabitledik */
+    object-fit: cover;
+    /* Resmi bozmadan kutuya doldurur */
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* Telefonlar ve küçük ekranlar için (Hizayı bozmaz, alt alta getirir) */
+@media (max-width: 992px) {
+    .detail-layout {
+        grid-template-columns: 1fr;
+        /* Tek sütuna düşer */
+        padding: 20px;
+        gap: 30px;
+    }
+
+    .detail-image img {
+        height: 350px;
+        /* Mobilde daha makul bir boy */
+    }
+}
+}
+
+
+.detail-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.detail-content::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: 10px;
+}
+
+.artifact-meta {
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 5px;
+}
+
+.artifact-description {
+    line-height: 1.8;
+    color: #444;
+}
+
+
+
+/* UX: İlginç Bilgi Kutusu (Fun Fact) */
+.fun-fact {
+    background: #fdf2e9;
+    border-left: 5px solid #e67e22;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 0 8px 8px 0;
+}
+
+.fun-fact h4 {
+    color: #e67e22;
+    margin-bottom: 5px;
+}
+
+/* --- GERİ BUTONU ALANI --- */
+.back-navigation {
+    margin-bottom: 20px;
+}
+
+/* --- FOOTER (ALT BİLGİ) --- */
+.footer {
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 50px;
+    border-top: 1px solid #DDD;
+}
+
+.footer p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--accent-color);
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+/* MOBİL UYUM */
+@media (max-width: 768px) {
+    .detail-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas: "gorsel" "yazi";
+    }
+
+    .spotlight-card {
+        flex-direction: column;
+        max-height: none;
+    }
+
+    .spotlight-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
+
+/* --- BEYZA'NIN İNCE RESİM KAYDIRMA AYARLARI (HİÇBİRİ SİLİNMEDİ) --- */
 img[src*="RON"] {
     object-fit: contain;
     object-position: 50% 25%;
     background-color: #FFFFFF;
+    padding: 0px;
 }
 
 img[src*="TRY"] {
     object-fit: contain;
     object-position: 50% 27%;
     background-color: #FFFFFF;
+    padding: 0px;
 }
 
-/* --- KART METİNLERİ --- */
-.card-info {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+img[src*="ZEUS"] {
+    object-position: 50% 20% !important;
 }
 
-#period-grid h2, .card h2, .period-card h2,
-#period-grid h3, .card h3, .period-card h3 {
-    padding: 15px 15px 5px 15px;
-    font-size: 1.5rem;
-    font-family: var(--font-display);
+img[src*="evet"] {
+    object-position: 50% 40% !important;
 }
 
-#period-grid p, .card p, .period-card p {
-    padding: 0 15px 20px 15px;
-    font-size: 0.95rem;
-    color: var(--muted-text);
-    flex-grow: 1;
+img[src*="yeni2"] {
+    object-position: 50% 50% !important;
 }
 
-/* --- FOOTER --- */
-.footer {
-    background-color: var(--text-color);
-    color: rgba(255,255,255,0.7);
-    text-align: center;
-    padding: 48px 20px;
-    margin-top: 80px;
+img[src*="yeni4"] {
+    object-position: 50% 60% !important;
 }
 
-.footer-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 0;
+img[src*="sfenks"] {
+    object-position: 50% 80% !important;
 }
 
-.footer-brand {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    color: white;
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: 4px;
+img[src*="CO"] {
+    object-position: 50% 24% !important;
 }
 
-.footer-brand .logo-icon {
-    color: var(--accent-color);
+img[src*="parthenon"] {
+    object-position: 50% 50% !important;
 }
 
-.footer-note {
-    font-size: 0.8rem;
-    color: rgba(255,255,255,0.4);
-    max-width: 400px;
-    line-height: 1.5;
+img[src*="EG"] {
+    object-position: 50% 40% !important;
 }
 
-.footer-team {
-    font-size: 0.82rem;
-    color: rgba(255,255,255,0.5);
+img[src*="not"] {
+    object-position: 50% 30% !important;
 }
 
-.footer-links {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-top: 4px;
+img[src*="gar"] {
+    object-position: 50% 20% !important;
 }
 
-.footer-links a {
-    text-decoration: none;
-    color: var(--accent-color);
-    font-size: 0.85rem;
-    font-weight: 500;
-    transition: opacity 0.2s;
+img[src*="mona"] {
+    object-position: 50% 15% !important;
 }
 
-.footer-links a:hover { opacity: 0.75; }
-
-.footer-links span {
-    color: rgba(255,255,255,0.25);
+img[src*="davutt"] {
+    object-position: 50% 40% !important;
 }
 
-/* --- KEŞFET BUTONU --- */
-.btn-kesfet {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 18px;
-    margin: 0 15px 20px 15px;
-    color: var(--accent-color);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 13px;
-    border: 1px solid var(--accent-color);
-    border-radius: 6px;
-    transition: all 0.25s ease;
-    align-self: flex-start;
-    margin-top: auto;
+img[src*="rone"] {
+    object-position: 50% 40% !important;
 }
 
-.btn-kesfet:hover {
-    background-color: var(--accent-color);
-    color: #ffffff;
-}
-
-.btn-kesfet i {
-    transition: transform 0.3s ease;
-}
-
-.btn-kesfet:hover i {
-    transform: translateX(4px);
-}
-
-/* --- GERİ BUTONU --- */
-.back-button-container {
-    max-width: 1000px;
-    margin-top: 20px;
-    padding: 0;
-    display: flex;
-    justify-content: flex-start;
-}
-
-.btn-geri:hover i { transform: translateX(-5px); }
-
-/* --- ESERLER SAYFASI GRID --- */
-@media (min-width: 900px) {
-    #artifact-grid {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 30px !important;
-    }
-
-    #artifact-grid article {
-        width: calc(33.333% - 20px) !important;
-        max-width: 350px !important;
-    }
-}
-
-/* --- RESİM POZİSYONLARI --- */
-img[src*="ZEUS"] { object-position: 50% 20% !important; }
-img[src*="evet"] { object-position: 50% 40% !important; }
-img[src*="yeni2"] { object-position: 50% 50% !important; }
-img[src*="yeni4"] { object-position: 50% 60% !important; }
-img[src*="sfenks"] { object-position: 50% 80% !important; }
-img[src*="CO"] { object-position: 50% 24% !important; }
-img[src*="parthenon"] { object-position: 50% 50% !important; }
-img[src*="EG"] { object-position: 50% 40% !important; }
-img[src*="not"] { object-position: 50% 30% !important; }
-img[src*="gar"] { object-position: 50% 20% !important; }
-img[src*="mona"] { object-position: 50% 15% !important; }
-img[src*="davutt"] { object-position: 50% 40% !important; }
-img[src*="rone"] { object-position: 50% 40% !important; }
-img[src*="sydney"] { object-position: 50% 90% !important; }
-
-/* --- DETAY SAYFASI --- */
-#artifact-detail {
-    width: 100%;
-    padding: 20px 20px 60px 20px;
-}
-
-.kusursuz-ortali-duzen {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-.sol-bilgi-alani {
-    width: 100%;
-    max-height: 550px;
-    overflow-y: auto;
-    padding-right: 20px;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar { width: 5px; }
-.sol-bilgi-alani::-webkit-scrollbar-track { background: transparent; }
-.sol-bilgi-alani::-webkit-scrollbar-thumb { background: #d4a373; border-radius: 10px; }
-.sol-bilgi-alani::-webkit-scrollbar-thumb:hover { background: #b88a5b; }
-
-.eser-kunyesi {
-    font-size: 0.8rem;
-    color: #888;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    display: block;
-}
-
-.eser-ana-baslik {
-    font-family: var(--font-display);
-    font-size: 2.5rem;
-    color: #111;
-    margin-bottom: 20px;
-    line-height: 1.1;
-    font-weight: 700;
-}
-
-.profesyonel-metin-blogu {
-    margin-bottom: 20px;
-}
-
-.profesyonel-metin-blogu h3 {
-    font-size: 0.75rem;
-    color: #222;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #d4a373;
-    display: inline-block;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.profesyonel-metin-blogu p {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: #444;
-    text-align: left;
-}
-
-.sag-gorsel-alani {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.sag-gorsel-alani img {
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
-}
-
-/* --- ANA SAYFA DÖNEM KARTLARI --- */
-#period-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-    width: 100%;
-    max-width: 1000px;
-    margin: 56px auto 100px auto;
-    padding: 0 20px;
-}
-
-#period-grid article.period-card {
-    background-color: var(--card-bg);
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
-    display: flex;
-    flex-direction: column;
-}
-
-#period-grid img {
-    width: 100%;
-    height: 280px;
-    object-fit: cover;
-    border-bottom: 1px solid var(--border-color);
-}
-
-#period-grid .card-info {
-    padding: 28px 30px;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-}
-
-#period-grid h2 {
-    font-family: var(--font-display);
-    font-size: 1.7rem;
-    color: #1a1714;
-    margin-bottom: 10px;
-    padding: 0;
-    font-weight: 600;
-}
-
-#period-grid p {
-    font-size: 0.93rem;
-    color: var(--muted-text);
-    margin-bottom: 24px;
-    padding: 0;
-    line-height: 1.65;
-}
-
-#period-grid .btn-kesfet {
-    margin: 0;
-    align-self: flex-start;
-}
-
-/* --- GERİ BUTONU --- */
-.back-navigation,
-.back-button-container {
-    width: 100%;
-    max-width: 1000px;
-    display: block;
-    text-align: left;
-}
-
-.btn-back {
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 18px;
-    color: var(--accent-color);
-    background-color: #ffffff;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 13px;
-    border: 1px solid var(--border-color);
-    border-radius: 6px;
-    transition: all 0.25s ease;
-}
-
-.btn-back:hover {
-    background-color: var(--accent-color);
-    color: #ffffff;
-    border-color: var(--accent-color);
-}
-
-/* --- MOBİL --- */
-@media (max-width: 850px) {
-    .main-header {
-        padding: 0 20px;
-    }
-
-    .hero-content {
-        padding: 0 24px;
-        max-width: 100%;
-        margin-left: 0;
-    }
-
-    .hero-section {
-        min-height: 85vh;
-        padding-bottom: 56px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.8rem;
-    }
-
-    #period-grid {
-        grid-template-columns: 1fr;
-        max-width: 500px;
-    }
+img[src*="sydney"] {
+    object-position: 50% 90% !important;
 }

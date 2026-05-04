@@ -6,9 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dönemlerin İzinde: Sanal Dünya Müzesi</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -18,10 +15,7 @@
 
     <header class="main-header">
         <nav class="nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">◈</span>
-                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
-            </a>
+            <a href="index.html" class="logo">DÖNEMLERİN İZİNDE</a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Koleksiyonlar</a></li>
                 <li><a href="about.html">Hakkında</a></li>
@@ -30,55 +24,128 @@
     </header>
 
     <main id="main-content">
-        <section class="hero-section">
-            <div class="hero-overlay"></div>
+        <!-- İHTİŞAMLI HERO ALANI -->
+        <section class="hero-section hero-anasayfa">
             <div class="hero-content">
-                <div class="hero-tag">Sanal Dünya Müzesi</div>
-                <h1>İnsanlık<br>Tarihinin<br><em>Katmanları</em></h1>
-                <p>Antik dünyadan modern sanatın doğuşuna kadar süren bir yolculuk.</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-num">4</span>
-                        <span class="stat-label">Dönem</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-num">20</span>
-                        <span class="stat-label">Eser</span>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
-                        <span class="stat-num">3000</span>
-                        <span class="stat-label">Yıllık Miras</span>
-                    </div>
-                </div>
-                <a href="#period-grid" class="hero-btn">
-                    <span>Dönemleri Keşfet</span>
-                    <i class="fa-solid fa-arrow-down"></i>
-                </a>
+                <h1>Dönemlerin İzinde</h1>
+                <p>Antik dünyadan modern sanatın doğuşuna kadar süren epik bir yolculuk.</p>
+                <p style="font-size: 1rem; color: #ccc; margin-bottom: 25px;">4 Dönem | 20 Eser | 3000 Yıllık Miras</p>
+                <a href="#period-grid" class="btn-hero">Dönemleri Keşfet</a>
             </div>
         </section>
 
+        <!-- KÜRATÖR NOTU -->
+        <section class="curator-note">
+            <p>Merhaba gezgin. Bu sanal müze, insanlığın dört büyük dönemine ışık tutmak için kuruldu. Antik Çağ'dan
+                Modern Dönem'e, her bir eser bir hikaye anlatır. Biz de o hikayeleri sizlere ulaştırmak için buradayız.
+            </p>
+            <p class="signature">Sena, Ebrar & Beyza / Küratör Ekibi</p>
+        </section>
+
+        <!-- GÜNÜN ESERİ (SPOTLIGHT) - BEYZA'NIN 24 SAATLİK DİNAMİK SİSTEMİ -->
+        <section class="spotlight">
+            <div class="spotlight-card">
+                <img src="resimler/mona.jpg" alt="Günün Eseri" id="spotlight-img" loading="lazy">
+                <div class="spotlight-info">
+                    <h2 style="color: #e67e22; font-size: 1.1rem; letter-spacing: 1px; margin-bottom: 10px;">🌟 GÜNÜN
+                        ESERİ</h2>
+                    <h3 id="spotlight-title" style="font-size: 2rem; margin-bottom: 10px;">Yükleniyor...</h3>
+                    <p id="spotlight-date" style="margin-bottom: 15px;"><strong>...</strong></p>
+                    <p id="spotlight-quote" class="quote">"..."</p>
+                    <p id="spotlight-desc">Eser bilgileri hazırlanıyor...</p>
+                    <a id="spotlight-link" href="#" class="btn-kesfet" style="width: max-content;">Eseri İncele</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- DÖNEM KARTLARI -->
+        <!-- Ebrar: app.js kartları basarken lütfen aşağıdaki yapıyı kullansın:
+        <article class="period-card">
+            <img src="..." alt="...">
+            <div class="card-info">
+                <h3>Dönem Adı</h3>
+                <p>Açıklama...</p>
+                <span class="highlight">Öne Çıkan: Eser Adı</span>
+                <span class="eser-count">📦 Bu dönemde 5 eser var</span>
+                <a href="..." class="btn-kesfet">Keşfet</a>
+            </div>
+        </article>
+        -->
         <section id="period-grid" class="container"></section>
+
     </main>
 
     <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <span class="logo-icon">◈</span>
-                <strong>Dönemlerin İzinde</strong>
-            </div>
-            <p class="footer-note">Bu site eğitim amaçlıdır. Web Tasarımı ve Değerlendirme dersi projesidir.</p>
-            <p class="footer-team">Proje Ekibi: Sena · Ebrar · Beyza &nbsp;|&nbsp; © 2026</p>
+        <div class="container">
+            <p>© 2026 Dönemlerin İzinde Sanal Müzesi | Ekip: Sena, Ebrar, Beyza</p>
             <div class="footer-links">
-                <a href="about.html">Hakkında</a>
-                <span>·</span>
-                <a href="sources.html">Kaynakça</a>
+                <a href="about.html">Hakkında</a> |
+                <a href="about.html#kaynakca">Kaynakça</a>
             </div>
+            <p style="font-size: 0.8rem; color: #888; margin-top: 5px;">Bu site eğitim amaçlıdır.</p>
         </div>
     </footer>
 
+    <!-- Ebrar'ın Kodu -->
     <script src="app.js"></script>
+
+    <!-- BEYZA'NIN GÜNÜN ESERİNİ 24 SAATTE BİR DEĞİŞTİREN ÖZEL KODU -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 4 Farklı Dönemin Öne Çıkan Eserleri
+            const gununEserleri = [
+                {
+                    id: "monalisa",
+                    baslik: "Mona Lisa (La Gioconda)",
+                    tarih: "1503 | Yeni Çağ (Rönesans)",
+                    soz: "\"Güzelliğin ve gizemin zamansız sembolü\"",
+                    aciklama: "Leonardo da Vinci'nin sfumato tekniğiyle yarattığı bu başyapıt, gizemli gülümsemesiyle her yıl milyonlarca insanı büyülemeye devam ediyor.",
+                    resim: "resimler/mona.jpg"
+                },
+                {
+                    id: "zeus",
+                    baslik: "Zeus Heykeli",
+                    tarih: "MÖ 435 | Antik Çağ",
+                    soz: "\"Antik dünyanın ihtişamlı tanrısı\"",
+                    aciklama: "Phidias tarafından Olympia'da yapılan bu devasa heykel, antik dünyanın yedi harikasından biri olarak kabul edilir ve gücü simgeler.",
+                    resim: "resimler/ANTIK.jpg"
+                },
+                {
+                    id: "bayeux",
+                    baslik: "Bayeux İşlemesi",
+                    tarih: "1066 | Orta Çağ",
+                    soz: "\"İğne ve iplikle yazılan tarih\"",
+                    aciklama: "İngiltere'nin Normanlar tarafından fethini anlatan, 70 metre uzunluğundaki bu eşsiz keten işleme, Orta Çağ'ın en önemli belgesellerinden biridir.",
+                    resim: "resimler/Bayeux.jpg"
+                },
+                {
+                    id: "eyfel",
+                    baslik: "Eyfel Kulesi",
+                    tarih: "1889 | Modern Dönem",
+                    soz: "\"Demirin gökyüzüyle modern dansı\"",
+                    aciklama: "Fransız Devrimi'nin 100. yılı anısına inşa edilen bu kule, modern mühendisliğin ve sanayileşmenin en büyük sembolüdür.",
+                    resim: "resimler/eyfel.jpg"
+                }
+            ];
+
+            // Bilgisayarın tarihini (ayın kaçıncı günü olduğunu) alır
+            const bugun = new Date().getDate();
+
+            // Ayın gününü, elimizdeki eser sayısına (4) bölerek kalanı (0,1,2,3) bulur.
+            // Bu sayede her gün gece 00:00'da sıradaki eser otomatik olarak ekrana gelir.
+            const secilenIndex = bugun % gununEserleri.length;
+            const gununEseri = gununEserleri[secilenIndex];
+
+            // HTML'deki ilgili yerlere o günkü eserin bilgilerini basar
+            document.getElementById("spotlight-img").src = gununEseri.resim;
+            document.getElementById("spotlight-img").alt = gununEseri.baslik;
+            document.getElementById("spotlight-title").innerText = gununEseri.baslik;
+            document.getElementById("spotlight-date").innerHTML = `<strong>${gununEseri.tarih}</strong>`;
+            document.getElementById("spotlight-quote").innerText = gununEseri.soz;
+            document.getElementById("spotlight-desc").innerText = gununEseri.aciklama;
+            document.getElementById("spotlight-link").href = `detail.html?id=${gununEseri.id}`;
+        });
+    </script>
 </body>
 
 </html>
