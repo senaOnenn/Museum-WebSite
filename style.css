@@ -1,14 +1,23 @@
 /* =========================================
    DÖNEMLERİN İZİNDE - STYLE.CSS
-   SENA'NIN İSKELETİ & BEYZA'NIN UX DOKUNUŞLARI
    ========================================= */
 
 /* --- TEMEL AYARLAR VE RENKLER --- */
 :root {
-    --bg-color: #F8F9FA;
-    --text-color: #212529;
+    --bg-color: #F5F2EE;
+    --text-color: #1a1714;
     --card-bg: #FFFFFF;
-    --accent-color: #C5A059;
+    --accent-color: #c4622d;
+    --accent-dark: #9e4a1f;
+    --accent-light: #f0ddd2;
+    --border-color: #e8e2da;
+    --muted-text: #6b6560;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'DM Sans', 'Segoe UI', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 * {
@@ -18,13 +27,13 @@
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-body);
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* --- ERİŞİLEBİLİRLİK (SKIP LINK) --- */
+/* --- ERİŞİLEBİLİRLİK --- */
 .skip-link {
     position: absolute;
     top: -40px;
@@ -36,18 +45,26 @@ body {
     text-decoration: none;
 }
 
-.skip-link:focus {
-    top: 0;
+.skip-link:focus { top: 0; }
+
+a:focus, button:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: 2px;
 }
 
 /* --- NAVİGASYON (HEADER) --- */
 .main-header {
-    background-color: var(--card-bg);
-    padding: 20px 40px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    background-color: rgba(245, 242, 238, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 0 40px;
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    height: 64px;
+    display: flex;
+    align-items: center;
 }
 
 .nav-container {
@@ -55,53 +72,201 @@ body {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
 .logo {
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    font-size: 1.3rem;
+    color: var(--accent-color);
+    line-height: 1;
+}
+
+.logo-text {
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 3px;
+    color: var(--text-color);
+    text-transform: uppercase;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 8px;
+    align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: var(--text-color);
-    font-weight: 500;
+    color: var(--muted-text);
+    font-weight: 400;
+    font-size: 0.9rem;
     transition: color 0.2s;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 0.3px;
 }
 
-.nav-links a:hover,
+.nav-links a:hover {
+    color: var(--text-color);
+    background-color: rgba(0,0,0,0.05);
+}
+
 .nav-links a.active {
     color: var(--accent-color);
+    background-color: var(--accent-light);
+    font-weight: 500;
 }
 
-/* --- ANA SAYFA KAHRAMAN ALANI (HERO) --- */
+/* --- HERO ALANI --- */
 .hero-section {
+    position: relative;
+    background-image: url('resimler/Anasayfa.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 8, 5, 0.62);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    width: 100%;
+    padding: 0 40px;
     text-align: center;
-
-    max-width: 800px;
-    margin: 0 auto;
 }
 
-.hero-section h1 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    font-family: 'Georgia', serif;
+.hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    background: rgba(196, 98, 45, 0.15);
+    border: 1px solid rgba(196, 98, 45, 0.35);
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 28px;
 }
 
-.hero-section p {
-    font-size: 1rem;
-    color: #555;
+.hero-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(3.2rem, 6vw, 5rem);
+    font-weight: 600;
+    line-height: 1.0;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
 }
 
-/* --- KARTLAR İÇİN IZGARA (GRID) --- */
+.hero-content h1 em {
+    font-style: italic;
+    color: #d4956a;
+    font-weight: 400;
+}
+
+.hero-content > p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.72);
+    margin-bottom: 40px;
+    font-weight: 300;
+    max-width: 500px;
+    line-height: 1.7;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* İstatistikler */
+.hero-stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 44px;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stat-num {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    font-weight: 400;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255,255,255,0.2);
+}
+
+/* Buton */
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: var(--accent-color);
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.25s, transform 0.2s;
+    letter-spacing: 0.3px;
+}
+
+.hero-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s;
+}
+
+.hero-btn:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+}
+
+.hero-btn:hover i {
+    transform: translateY(3px);
+}
+
+/* --- KARTLAR İÇİN IZGARA --- */
 .container {
     width: 100%;
     max-width: 1200px;
@@ -110,15 +275,16 @@ body {
     display: block;
 }
 
-/* --- BEYZA'NIN UX GÖREVİ: MİKRO ETKİLEŞİMLER (HOVER) --- */
+/* --- KART MİKRO ETKİLEŞİMLER --- */
 #period-grid div,
 .card,
 .period-card {
     background-color: var(--card-bg);
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--border-color);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     display: flex;
     flex-direction: column;
 }
@@ -126,14 +292,12 @@ body {
 #period-grid div:hover,
 .card:hover,
 .period-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
     cursor: pointer;
 }
 
-/* =========================================
-   RESİMLER (İLK ATTIĞIN ORİJİNAL KODLAR - HİÇ DOKUNULMADI)
-   ========================================= */
+/* --- RESİMLER --- */
 #period-grid img,
 .card img,
 .period-card img {
@@ -141,21 +305,19 @@ body {
     height: 250px;
     object-fit: cover;
     display: block;
-    border-bottom: 1px solid #EEE;
+    border-bottom: 1px solid var(--border-color);
 }
 
 img[src*="RON"] {
     object-fit: contain;
     object-position: 50% 25%;
     background-color: #FFFFFF;
-    padding: 0px;
 }
 
 img[src*="TRY"] {
     object-fit: contain;
     object-position: 50% 27%;
     background-color: #FFFFFF;
-    padding: 0px;
 }
 
 /* --- KART METİNLERİ --- */
@@ -165,66 +327,108 @@ img[src*="TRY"] {
     flex-grow: 1;
 }
 
-#period-grid h2,
-.card h2,
-.period-card h2,
-#period-grid h3,
-.card h3,
-.period-card h3 {
+#period-grid h2, .card h2, .period-card h2,
+#period-grid h3, .card h3, .period-card h3 {
     padding: 15px 15px 5px 15px;
     font-size: 1.5rem;
+    font-family: var(--font-display);
 }
 
-#period-grid p,
-.card p,
-.period-card p {
+#period-grid p, .card p, .period-card p {
     padding: 0 15px 20px 15px;
-    font-size: 1rem;
-    color: #666;
+    font-size: 0.95rem;
+    color: var(--muted-text);
     flex-grow: 1;
 }
 
-/* --- FOOTER (ALT BİLGİ) --- */
+/* --- FOOTER --- */
 .footer {
-    background-color: var(--card-bg);
+    background-color: var(--text-color);
+    color: rgba(255,255,255,0.7);
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 50px;
-    border-top: 1px solid #DDD;
+    padding: 48px 20px;
+    margin-top: 80px;
 }
 
-.footer p {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
+.footer-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+}
+
+.footer-brand .logo-icon {
+    color: var(--accent-color);
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+    max-width: 400px;
+    line-height: 1.5;
+}
+
+.footer-team {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.5);
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
 }
 
 .footer-links a {
     text-decoration: none;
     color: var(--accent-color);
-    margin: 0 5px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
 }
 
-/* --- KEŞFET & İNCELE BUTONU --- */
+.footer-links a:hover { opacity: 0.75; }
+
+.footer-links span {
+    color: rgba(255,255,255,0.25);
+}
+
+/* --- KEŞFET BUTONU --- */
 .btn-kesfet {
     display: inline-flex;
     align-items: center;
     gap: 8px;
     padding: 8px 18px;
     margin: 0 15px 20px 15px;
-    color: #b86a11;
+    color: var(--accent-color);
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid var(--accent-color);
+    border-radius: 6px;
+    transition: all 0.25s ease;
     align-self: flex-start;
+    margin-top: auto;
 }
 
 .btn-kesfet:hover {
-    background-color: #965812;
+    background-color: var(--accent-color);
     color: #ffffff;
-    border-color: #a45b1c;
 }
 
 .btn-kesfet i {
@@ -232,26 +436,21 @@ img[src*="TRY"] {
 }
 
 .btn-kesfet:hover i {
-    transform: translateX(5px);
+    transform: translateX(4px);
 }
 
-/* --- GERİ BUTONU HİZALAMASI --- */
+/* --- GERİ BUTONU --- */
 .back-button-container {
     max-width: 1000px;
-    /* İçerikle birebir aynı hizada olması için güncellendi */
     margin-top: 20px;
     padding: 0;
     display: flex;
     justify-content: flex-start;
 }
 
-.btn-geri:hover i {
-    transform: translateX(-5px);
-}
+.btn-geri:hover i { transform: translateX(-5px); }
 
-/* =========================================
-   ESERLER SAYFASI: 3 - 2 KUSURSUZ DİZİLİM
-   ========================================= */
+/* --- ESERLER SAYFASI GRID --- */
 @media (min-width: 900px) {
     #artifact-grid {
         display: flex !important;
@@ -266,73 +465,26 @@ img[src*="TRY"] {
     }
 }
 
-/* =========================================
-   RESİMLERİ BİREYSEL OLARAK KAYDIRMA
-   ========================================= */
-img[src*="ZEUS"] {
-    object-position: 50% 20% !important;
-}
+/* --- RESİM POZİSYONLARI --- */
+img[src*="ZEUS"] { object-position: 50% 20% !important; }
+img[src*="evet"] { object-position: 50% 40% !important; }
+img[src*="yeni2"] { object-position: 50% 50% !important; }
+img[src*="yeni4"] { object-position: 50% 60% !important; }
+img[src*="sfenks"] { object-position: 50% 80% !important; }
+img[src*="CO"] { object-position: 50% 24% !important; }
+img[src*="parthenon"] { object-position: 50% 50% !important; }
+img[src*="EG"] { object-position: 50% 40% !important; }
+img[src*="not"] { object-position: 50% 30% !important; }
+img[src*="gar"] { object-position: 50% 20% !important; }
+img[src*="mona"] { object-position: 50% 15% !important; }
+img[src*="davutt"] { object-position: 50% 40% !important; }
+img[src*="rone"] { object-position: 50% 40% !important; }
+img[src*="sydney"] { object-position: 50% 90% !important; }
 
-img[src*="evet"] {
-    object-position: 50% 40% !important;
-}
-
-img[src*="yeni2"] {
-    object-position: 50% 50% !important;
-}
-
-img[src*="yeni4"] {
-    object-position: 50% 60% !important;
-}
-
-img[src*="sfenks"] {
-    object-position: 50% 80% !important;
-}
-
-img[src*="CO"] {
-    object-position: 50% 24% !important;
-}
-
-img[src*="parthenon"] {
-    object-position: 50% 50% !important;
-}
-
-img[src*="EG"] {
-    object-position: 50% 40% !important;
-}
-
-img[src*="not"] {
-    object-position: 50% 30% !important;
-}
-
-img[src*="gar"] {
-    object-position: 50% 20% !important;
-}
-
-img[src*="mona"] {
-    object-position: 50% 15% !important;
-}
-
-img[src*="davutt"] {
-    object-position: 50% 40% !important;
-}
-
-img[src*="rone"] {
-    object-position: 50% 40% !important;
-}
-
-img[src*="sydney"] {
-    object-position: 50% 90% !important;
-}
-
-
-/* /* =========================================
-   BEYZA'NIN İMZASI: TEK EKRANA CUK OTURAN COMPACT DETAY SAYFASI
-   ========================================= */
+/* --- DETAY SAYFASI --- */
 #artifact-detail {
     width: 100%;
     padding: 20px 20px 60px 20px;
-    /* Üstteki gereksiz 60px boşluğu 20px'e indirdik */
 }
 
 .kusursuz-ortali-duzen {
@@ -340,57 +492,40 @@ img[src*="sydney"] {
     grid-template-columns: 2fr 1fr;
     gap: 50px;
     align-items: flex-start;
-    /* EN KRİTİK NOKTA: Her şeyi Geri Dön butonuyla AYNI üst hizadan başlatır, aşağı kaymasını engeller */
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
 }
 
-/* --- SOL TARAF (İÇTEN KAYDIRMALI YAZILAR) --- */
 .sol-bilgi-alani {
     width: 100%;
     max-height: 550px;
-    /* Resimle aynı hizaya çekildi */
     overflow-y: auto;
     padding-right: 20px;
 }
 
-/* Scrollbar Tasarımı (Değişmedi, harika duruyor) */
-.sol-bilgi-alani::-webkit-scrollbar {
-    width: 5px;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar-thumb {
-    background: #d4a373;
-    border-radius: 10px;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar-thumb:hover {
-    background: #b88a5b;
-}
+.sol-bilgi-alani::-webkit-scrollbar { width: 5px; }
+.sol-bilgi-alani::-webkit-scrollbar-track { background: transparent; }
+.sol-bilgi-alani::-webkit-scrollbar-thumb { background: #d4a373; border-radius: 10px; }
+.sol-bilgi-alani::-webkit-scrollbar-thumb:hover { background: #b88a5b; }
 
 .eser-kunyesi {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: #888;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
     margin-bottom: 8px;
     text-transform: uppercase;
     display: block;
-    /* Tam yukarıdan başlaması için */
 }
 
 .eser-ana-baslik {
+    font-family: var(--font-display);
     font-size: 2.5rem;
-    /* Başlığı bir tık belirginleştirdik */
     color: #111;
     margin-bottom: 20px;
     line-height: 1.1;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .profesyonel-metin-blogu {
@@ -398,22 +533,23 @@ img[src*="sydney"] {
 }
 
 .profesyonel-metin-blogu h3 {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #222;
     margin-bottom: 10px;
     padding-bottom: 5px;
     border-bottom: 2px solid #d4a373;
     display: inline-block;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .profesyonel-metin-blogu p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.7;
     color: #444;
     text-align: left;
 }
 
-/* --- SAĞ TARAF (KİLİTLENMİŞ, TAŞMAYAN RESİM) --- */
 .sag-gorsel-alani {
     width: 100%;
     display: flex;
@@ -424,231 +560,121 @@ img[src*="sydney"] {
     width: 100%;
     max-width: 600px;
     height: 450px;
-    /* EN KRİTİK NOKTA 2: Sol alanla milimetrik aynı yüksekliğe KİLİTLEDİK */
     object-fit: cover;
-    /* Resmi sündürmez, içini croplar */
     object-position: center top;
-    /* Resmin en can alıcı kısmı üst kısımsa onu odaklar */
     border-radius: 8px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-/* =========================================
-   ANA SAYFA: DÖNEM KARTLARI ÖZEL 2'Lİ DİZİLİM (KOMPAKT VE ORTALI)
-   ========================================= */
+/* --- ANA SAYFA DÖNEM KARTLARI --- */
 #period-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    /* 2'li yan yana düzen */
-    gap: 40px;
-    /* Kartlar arası boşluk */
+    gap: 32px;
     width: 100%;
     max-width: 1000px;
-    /* İKİNCİ RESİMDEKİ SIR: Ekranı kaplamasını engeller, merkeze toplar */
-    margin: 40px auto 80px auto;
-    /* Sayfayı tam ortalar */
+    margin: 56px auto 100px auto;
     padding: 0 20px;
-    /* Dar ekranlarda kenarlara yapışmasını önler */
 }
 
-/* Kartın Dış Çerçevesi */
 #period-grid article.period-card {
     background-color: var(--card-bg);
     border-radius: 12px;
-    /* Köşeleri ikinci resimdeki gibi tatlıca yuvarlatır */
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-    /* Hafif, kaliteli bir gölge */
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
     display: flex;
     flex-direction: column;
 }
 
-/* Kart İçindeki Resimler */
 #period-grid img {
     width: 100%;
     height: 280px;
-    /* İlk resimdeki devasa boyu kıstık, ikinci resimdeki orana getirdik */
     object-fit: cover;
-    border-bottom: none;
-    /* Resmin altındaki gereksiz çizgiyi sildik */
+    border-bottom: 1px solid var(--border-color);
 }
 
-/* Yazıların Olduğu Alt Kısım */
 #period-grid .card-info {
-    padding: 30px;
-    /* İkinci resimdeki o ferah iç boşluğu (nefes payını) sağlar */
+    padding: 28px 30px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
 
 #period-grid h2 {
-    font-size: 1.6rem;
-    color: #1a1a1a;
-    margin-bottom: 12px;
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    color: #1a1714;
+    margin-bottom: 10px;
     padding: 0;
-    /* Eski gereksiz boşlukları sildik */
+    font-weight: 600;
 }
 
 #period-grid p {
-    font-size: 1rem;
-    color: #666;
-    margin-bottom: 25px;
-    /* Butonla yazı arasına mesafe koyar */
+    font-size: 0.93rem;
+    color: var(--muted-text);
+    margin-bottom: 24px;
     padding: 0;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-/* Keşfet Butonunun Konumu */
 #period-grid .btn-kesfet {
     margin: 0;
-    /* Butonu sola tam hizalar */
     align-self: flex-start;
 }
 
-/* =========================================
-   SADECE GERİ DÖN BUTONU (DİĞER HİÇBİR ŞEYİ ETKİLEMEZ)
-   ========================================= */
-
-/* Butonun durduğu satırı diğerlerinden tamamen bağımsız yapıyoruz */
+/* --- GERİ BUTONU --- */
 .back-navigation,
 .back-button-container {
     width: 100%;
     max-width: 1000px;
     display: block;
-    /* Sayfanın geri kalanındaki grid/flex yapılarını KESİNLİKLE bozmaz */
     text-align: left;
 }
 
-/* Butonun şık "İncele" butonu tasarımı */
 .btn-back {
     display: inline-flex;
     align-items: center;
     padding: 8px 18px;
-    color: #b86a11;
-    /* Temanın şık altın/hardal rengi */
+    color: var(--accent-color);
     background-color: #ffffff;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 13px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    transition: all 0.25s ease;
 }
 
-/* Fareyle üzerine gelince renk değişimi */
 .btn-back:hover {
-    background-color: #965812;
+    background-color: var(--accent-color);
     color: #ffffff;
-    border-color: #a45b1c;
+    border-color: var(--accent-color);
 }
 
-/* Mobilde (Telefonda) Alt Alta Düşmesi İçin */
+/* --- MOBİL --- */
 @media (max-width: 850px) {
+    .main-header {
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        padding: 0 24px;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .hero-section {
+        min-height: 85vh;
+        padding-bottom: 56px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
     #period-grid {
         grid-template-columns: 1fr;
         max-width: 500px;
-        /* Mobilde çok fazla uzamasını engeller */
     }
-}
-
-/* =========================================
-   TÜM ESERLER İÇİN COMPACT DETAY SAYFASI
-   ========================================= */
-#artifact-detail {
-    width: 100%;
-    padding: 20px 20px 60px 20px;
-}
-
-.kusursuz-ortali-duzen {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 50px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 1500px;
-    margin: 0 auto;
-}
-
-/* Sol Taraf (İçten Kaydırmalı Yazı) */
-.sol-bilgi-alani {
-    width: 100%;
-    max-height: 600px;
-    overflow-y: auto;
-    padding-right: 25px;
-    padding-bottom: 20px;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar {
-    width: 5px;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.sol-bilgi-alani::-webkit-scrollbar-thumb {
-    background: #d4a373;
-    border-radius: 10px;
-}
-
-.eser-kunyesi {
-    font-size: 0.85rem;
-    color: #888;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    margin-bottom: 8px;
-    text-transform: uppercase;
-    display: block;
-}
-
-.eser-ana-baslik {
-    font-size: 2.5rem;
-    color: #111;
-    margin-bottom: 20px;
-    line-height: 1.1;
-    font-weight: 800;
-}
-
-.profesyonel-metin-blogu h3 {
-    font-size: 0.8rem;
-    color: #222;
-    margin-bottom: 10px;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #d4a373;
-    display: inline-block;
-}
-
-.profesyonel-metin-blogu p {
-    font-size: 1rem;
-    line-height: 1.7;
-    color: #444;
-    text-align: left;
-}
-
-.sag-gorsel-alani img {
-    width: 100%;
-    max-width: 600px;
-    height: 550px;
-    /* Sol taraftaki metin kutusuyla eşitlendi */
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-}
-
-/* Sağ Taraf (Kilitli Resim) */
-.sag-gorsel-alani {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.sag-gorsel-alani img {
-    width: 100%;
-    max-width: 600px;
-    height: 450px;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 8px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }

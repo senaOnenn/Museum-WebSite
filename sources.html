@@ -5,8 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kaynakça - Sanal Dünya Müzesi</title>
-
     <link rel="stylesheet" href="style.css">
+    <!-- Premium Fontlar -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .page-hero {
+            background-color: var(--text-color);
+            padding: 72px 40px 64px;
+            text-align: center;
+        }
+        .page-hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.4rem, 4vw, 3.6rem);
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 16px;
+        }
+        .page-hero p {
+            font-size: 1rem;
+            color: rgba(255,255,255,0.55);
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 300;
+            line-height: 1.7;
+        }
+        .sources-body {
+            max-width: 900px;
+            margin: 60px auto 100px;
+            padding: 0 32px;
+        }
+        .source-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .source-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+        .source-card h2 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+        .source-list {
+            list-style: none;
+            padding: 0;
+        }
+        .source-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--muted-text);
+        }
+        .source-list li::before {
+            content: '◈';
+            color: var(--accent-color);
+            font-size: 0.8rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -15,7 +84,10 @@
 
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html">Koleksiyonlar</a></li>
                 <li><a href="about.html">Hakkında</a></li>
@@ -23,59 +95,64 @@
         </nav>
     </header>
 
-    <main id="main-content" class="container" style="padding-top: 4rem;">
+    <main id="main-content">
 
-        <section class="about-section">
-            <h1 class="serif-title">Kaynakça</h1>
-            <p class="artifact-description" style="margin-bottom: 2rem;">
-                Bu projede kullanılan tüm akademik bilgiler, görsel materyaller ve multimedya içerikleri aşağıda
-                belirtilen açık kaynaklı ve güvenilir platformlardan temin edilmiştir[cite: 243, 307].
-            </p>
+        <div class="page-hero">
+            <div style="color: var(--accent-color); font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 15px; font-weight: 500;">Akademik Referanslar</div>
+            <h1>Kaynakça</h1>
+            <p>Bu projede kullanılan tüm akademik bilgiler, görsel materyaller ve teknik standartlar güvenilir platformlardan derlenmiştir.</p>
+        </div>
 
-            <div class="sources-container" style="display: flex; flex-direction: column; gap: 2rem;">
+        <div class="sources-body">
 
-                <article class="source-item">
-                    <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Görsel Kaynaklar</h2>
-                    <ul style="line-height: 2; padding-left: 1.2rem;">
-                        <li>Google Arts & Culture Digital Archives</li>
-                        <li>The Metropolitan Museum of Art Open Access</li>
-                        <li>Unsplash (Müze iç mekan ve dekoratif görseller)</li>
-                    </ul>
-                </article>
-
-                <article class="source-item">
-                    <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Akademik ve Tarihsel Veriler
-                    </h2>
-                    <ul style="line-height: 2; padding-left: 1.2rem;">
-                        <li>Britannica Encyclopedia - Tarih Bölümü</li>
-                        <li>UNESCO World Heritage List Descriptions</li>
-                        <li>Louvre Museum Official Online Collection</li>
-                    </ul>
-                </article>
-
-                <article class="source-item">
-                    <h2 style="font-family: var(--font-heading); margin-bottom: 0.5rem;">Teknik Referanslar</h2>
-                    <ul style="line-height: 2; padding-left: 1.2rem;">
-                        <li>MDN Web Docs (Erişilebilirlik ve HTML5 Standartları) [cite: 16]</li>
-                        <li>W3C Web Content Accessibility Guidelines (WCAG) [cite: 16]</li>
-                        <li>Google Lighthouse Performance Best Practices [cite: 17, 96]</li>
-                    </ul>
-                </article>
-
+            <div class="source-card">
+                <h2>Görsel Kaynaklar</h2>
+                <ul class="source-list">
+                    <li>Google Arts & Culture Digital Archives (Temel İlham Kaynağı)</li>
+                    <li>The Metropolitan Museum of Art Open Access</li>
+                    <li>Unsplash & Pexels (Dekoratif müze iç mekan görselleri)</li>
+                    <li>Louvre Müzesi Dijital Arşivi</li>
+                </ul>
             </div>
-        </section>
+
+            <div class="source-card">
+                <h2>Akademik ve Tarihsel Veriler</h2>
+                <ul class="source-list">
+                    <li>Britannica Encyclopedia - Sanat Tarihi Bölümü</li>
+                    <li>UNESCO World Heritage List Descriptions</li>
+                    <li>British Museum Public Collection Metadata</li>
+                    <li>Louvre Museum Official Online Collection</li>
+                </ul>
+            </div>
+
+            <div class="source-card">
+                <h2>Teknik Referanslar ve Standartlar</h2>
+                <ul class="source-list">
+                    <li>W3C Web Content Accessibility Guidelines (WCAG 2.1)</li>
+                    <li>Google Lighthouse Performance & Best Practices[cite: 1]</li>
+                    <li>MDN Web Docs (Semantik HTML ve CSS Standartları)[cite: 1]</li>
+                </ul>
+            </div>
+
+        </div>
 
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza [cite: 18, 243]</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+            </div>
+            <p class="footer-note">Bu site eğitim amaçlıdır. Web Tasarımı ve Değerlendirme dersi projesidir.</p>
+            <p class="footer-team">Proje Ekibi: Sena · Ebrar · Beyza &nbsp;|&nbsp; © 2026[cite: 1]</p>
             <div class="footer-links">
                 <a href="about.html">Hakkında</a>
+                <span>·</span>
+                <a href="sources.html">Kaynakça</a>
             </div>
         </div>
     </footer>
 
 </body>
-
 </html>

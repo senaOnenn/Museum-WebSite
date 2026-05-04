@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dönemlerin İzinde: Sanal Dünya Müzesi</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -15,7 +18,10 @@
 
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Koleksiyonlar</a></li>
                 <li><a href="about.html">Hakkında</a></li>
@@ -25,21 +31,48 @@
 
     <main id="main-content">
         <section class="hero-section">
+            <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h1>İnsanlık Tarihinin Katmanlarını Keşfedin</h1>
+                <div class="hero-tag">Sanal Dünya Müzesi</div>
+                <h1>İnsanlık<br>Tarihinin<br><em>Katmanları</em></h1>
                 <p>Antik dünyadan modern sanatın doğuşuna kadar süren bir yolculuk.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">4</span>
+                        <span class="stat-label">Dönem</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">20</span>
+                        <span class="stat-label">Eser</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">3000</span>
+                        <span class="stat-label">Yıllık Miras</span>
+                    </div>
+                </div>
+                <a href="#period-grid" class="hero-btn">
+                    <span>Dönemleri Keşfet</span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </a>
             </div>
         </section>
 
-        <!-- Ebrar: Statik article etiketleri silindi, app.js burayı dolduracak -->
         <section id="period-grid" class="container"></section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+            </div>
+            <p class="footer-note">Bu site eğitim amaçlıdır. Web Tasarımı ve Değerlendirme dersi projesidir.</p>
+            <p class="footer-team">Proje Ekibi: Sena · Ebrar · Beyza &nbsp;|&nbsp; © 2026</p>
             <div class="footer-links">
-                <a href="about.html">Hakkında</a> |
+                <a href="about.html">Hakkında</a>
+                <span>·</span>
                 <a href="sources.html">Kaynakça</a>
             </div>
         </div>

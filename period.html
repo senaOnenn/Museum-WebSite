@@ -4,50 +4,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dönem Eserleri - Sanal Dünya Müzesi</title>
+    <title>Dönem Eserleri - Dönemlerin İzinde</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Diğer sayfalarla birebir aynı olan premium fontlar eklendi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
     <a href="#main-content" class="skip-link">İçeriğe Atla</a>
 
+    <!-- Güncel Premium Header -->
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html">Koleksiyonlar</a></li>
+                <!-- Dönemler sayfasında olduğumuz için Koleksiyonlar aktif -->
+                <li><a href="index.html" class="active">Koleksiyonlar</a></li>
                 <li><a href="about.html">Hakkında</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="back-button-container">
-        <a href="index.html" class="btn-kesfet btn-geri">
-            <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
-        </a>
-    </div>
-
     <main id="main-content">
-        <section class="hero-section" style="padding-bottom: 2rem;">
-            <div id="period-header-info">
-                <h1>Yükleniyor...</h1>
-                <p>Seçilen döneme ait eserler hazırlanıyor.</p>
+        
+        <!-- About sayfasındaki şık, koyu renkli tepe alanı (Hero) konsepti bu sayfaya uyarlandı -->
+        <div style="background-color: var(--text-color); padding: 60px 40px; text-align: center; margin-bottom: 40px;">
+            <!-- Geri Dön Butonu - Koyu arkaplanda beyaz şık bir görünüme ayarlandı -->
+            <div class="container" style="text-align: left; margin-bottom: 20px;">
+                <a href="index.html" class="btn-back" style="background: transparent; color: rgba(255,255,255,0.8); border-color: rgba(255,255,255,0.3);">
+                    <i class="fa-solid fa-arrow-left"></i> Koleksiyonlara Dön
+                </a>
             </div>
-        </section>
+            
+            <!-- Ebrar'ın JS verilerini basacağı alan (ID'ler korundu) -->
+            <div id="period-header-info" style="max-width: 800px; margin: 0 auto; color: white;">
+                <h1 style="font-family: var(--font-display); font-size: clamp(2.4rem, 4vw, 3.6rem); font-weight: 600; margin-bottom: 15px;">Yükleniyor...</h1>
+                <p style="font-family: var(--font-body); font-size: 1.1rem; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto;">Seçilen döneme ait eserler hazırlanıyor.</p>
+            </div>
+        </div>
 
-        <section class="container">
-            <!-- Ebrar: Statik içerik temizlendi, grid app.js ile dolacak -->
-            <div id="artifact-grid" class="grid-container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;"></div>
+        <!-- Eserlerin listeleneceği alan -->
+        <section class="container" style="margin-bottom: 100px;">
+            <!-- CSS dosyasındaki kusursuz 3'lü/2'li dizilim grid yapısına bırakıldı. Inline CSS'ler temizlendi. -->
+            <div id="artifact-grid" class="grid-container"></div>
         </section>
+        
     </main>
 
+    <!-- Güncel Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+            </div>
+            <p class="footer-note">Bu site eğitim amaçlıdır. Web Tasarımı ve Değerlendirme dersi projesidir.</p>
+            <p class="footer-team">Proje Ekibi: Sena · Ebrar · Beyza &nbsp;|&nbsp; © 2026</p>
             <div class="footer-links">
-                <a href="about.html">Hakkında</a> |
+                <a href="about.html">Hakkında</a>
+                <span>·</span>
                 <a href="sources.html">Kaynakça</a>
             </div>
         </div>
