@@ -4,8 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eser Detayı - Sanal Dünya Müzesi</title>
+    <title>Eser Detayı - Dönemlerin İzinde</title>
+    <meta name="description"
+        content="Tarihi eserlerin detaylı bilgilerini keşfedin. Tarihsel arka plan, eserin önemi ve ilginç bilgiler.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -14,93 +22,102 @@
 
     <header class="main-header">
         <nav class="nav-container">
-            <a href="index.html" class="logo">DÖNEMLERİN İZİNDE</a>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html">Koleksiyonlar</a></li>
-                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="period.html?id=ancient" class="nav-link">Koleksiyonlar</a></li>
+                <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                <li><a href="sources.html" class="nav-link">Kaynakça</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </nav>
     </header>
 
-    <main id="main-content" class="container" style="padding-top: 2rem; padding-bottom: 5rem;">
+    <main id="main-content">
 
-        <div class="back-navigation">
-            <a href="javascript:history.back()" class="btn-back">Geri Dön</a>
+        <div class="back-button-container">
+            <a href="javascript:history.back()" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Geri Dön
+            </a>
         </div>
 
-        <article id="artifact-detail" class="detail-layout">
+        <article id="artifact-detail" class="kusursuz-ortali-duzen">
 
-            <!-- METİN SOLDA OLMASI İÇİN YUKARI ALINDI -->
-            <div class="detail-content">
-                <h1 id="artifact-title" class="serif-title">Eser Adı Yükleniyor...</h1>
-
-                <div class="artifact-meta">
-                    <p style="margin-bottom: 5px;"><strong>Tarih:</strong> <span id="artifact-date">...</span></p>
-                    <p><strong>Konum:</strong> <span id="artifact-location">...</span></p>
+            <div class="sol-bilgi-alani">
+                <div class="eser-kunyesi">
+                    <span id="artifact-date">Tarih Yükleniyor</span>
+                    <span>|</span>
+                    <span id="artifact-location">Konum Yükleniyor</span>
                 </div>
+                <h1 id="artifact-title" class="eser-ana-baslik">Eser Adı Yükleniyor...</h1>
 
-                <div class="artifact-description">
-                    <p id="artifact-desc">Açıklama yükleniyor...</p>
-                </div>
-
-                <!-- BEYZA'NIN İLGİNÇ BİLGİ KUTUSU -->
                 <div class="fun-fact">
-                    <h4>💡 İlginç Bilgi</h4>
-                    <p id="artifact-funfact">Sanat tarihinin en şaşırtıcı sırları burada saklı. Bu eser, yapıldığı
-                        dönemin ruhunu kusursuzca yansıtır.</p>
+                    <h4><i class="fa-solid fa-lightbulb"></i> İLGİNÇ BİLGİ</h4>
+                    <p id="artifact-funfact">İlginç bilgi yükleniyor...</p>
                 </div>
 
-                <div id="multimedia-container" class="multimedia-area"></div>
+                <div class="profesyonel-metin-blogu">
+                    <h3>📜 Tarihsel Arka Plan</h3>
+                    <p id="artifact-history">Yükleniyor...</p>
+                </div>
+
+                <div class="profesyonel-metin-blogu">
+                    <h3>🏛️ Eserin Önemi</h3>
+                    <p id="artifact-significance">Yükleniyor...</p>
+                </div>
+
+                <div class="profesyonel-metin-blogu">
+                    <h3>📝 Müze Notu</h3>
+                    <p id="artifact-museumNote">Yükleniyor...</p>
+                </div>
             </div>
 
-            <!-- RESİM SAĞDA OLMASI İÇİN AŞAĞI ALINDI -->
-            <div class="detail-image">
-                <img src="" alt="Yükleniyor..." id="artifact-img" loading="lazy">
+            <div class="sag-gorsel-alani">
+                <img src="" alt="Eser Görseli" id="artifact-img" loading="lazy">
             </div>
 
         </article>
+
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
-            <div class="footer-links">
-                <a href="about.html">Hakkında</a> |
-                <a href="about.html#kaynakca">Kaynakça</a>
+        <div class="footer-inner container">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+                <p>İnsanlığın büyük mirasını dijital ortama taşıyan sanal müze.</p>
             </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="period.html?id=ancient">Antik Çağ</a></li>
+                    <li><a href="period.html?id=medieval">Orta Çağ</a></li>
+                    <li><a href="period.html?id=renaissance">Rönesans</a></li>
+                    <li><a href="period.html?id=modern">Modern Dönem</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="sources.html">Kaynakça</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Dönemlerin İzinde | Sena · Ebrar · Beyza | Bu site eğitim amaçlıdır.</p>
         </div>
     </footer>
 
-    <!-- EBRAR'IN VERİ ÇEKME KODU -->
     <script src="app.js"></script>
-
-    <!-- BEYZA'NIN İLGİNÇ BİLGİLER ARŞİVİ VE DİNAMİK KODU -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            // URL'den eserin ID'sini al (örn: ?id=monalisa)
-            const urlParams = new URLSearchParams(window.location.search);
-            const eserId = urlParams.get('id');
-
-            // Beyza'nın İlginç Bilgiler Veritabanı
-            const ilgincBilgiler = {
-                "monalisa": "Mona Lisa tablosu sanıldığı kadar büyük değildir, sadece 77x53 cm boyutlarındadır. Ayrıca 1911'de müzeden çalınana kadar günümüzdeki kadar popüler değildi!",
-                "zeus": "Zeus Heykeli'nin yapımı tam 12 yıl sürmüş ve heykelin üzerindeki süslemelerde yaklaşık 200 kg altın kullanılmıştır!",
-                "bayeux": "Bayeux İşlemesi aslında bir 'halı' değil, keten kumaş üzerine yün iplikle yapılmış 70 metre uzunluğunda devasa bir el nakışıdır.",
-                "eyfel": "Eyfel Kulesi aslında Fransız Devrimi'nin 100. yılı için geçici olarak (sadece 20 yıllığına) inşa edilmişti ve Paris halkı ilk yapıldığında ondan nefret etmişti!",
-                "davut": "Michelangelo, Davut heykelinin başını ve sağ elini bilerek orantısız büyüklükte yapmıştır. Çünkü heykelin yüksek bir kaideye konulacağını ve insanların aşağıdan yukarıya bakacağını biliyordu.",
-                "parthenon": "Parthenon tapınağındaki sütunların hiçbiri aslında tam düz değildir. Mimarlar, uzaktan bakıldığında kusursuz düz görünmesi için optik illüzyon hesaplamaları yapmıştır.",
-                "sfenks": "Büyük Sfenks'in burnunun Napolyon'un askerleri tarafından kırıldığı efsanesi yanlıştır. Çizimler, burnun Napolyon Mısır'a gelmeden yüzyıllar önce de kayıp olduğunu gösteriyor."
-            };
-
-            // Eğer URL'de bir ID varsa ve bizim arşivimizde bu ID'ye ait bilgi varsa ekrana bas
-            if (eserId && ilgincBilgiler[eserId]) {
-                document.getElementById("artifact-funfact").innerText = ilgincBilgiler[eserId];
-            } else if (!eserId) {
-                // Eğer direkt detail.html açıldıysa uyarı ver
-                document.getElementById("artifact-funfact").innerText = "💡 İlginç bilgileri görmek için lütfen ana sayfadan bir eser seçerek gelin.";
-            }
-        });
-    </script>
 </body>
 
 </html>

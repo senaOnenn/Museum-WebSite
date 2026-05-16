@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilgi Yarışması - Dönemlerin İzinde</title>
+    <meta name="description"
+        content="Tarih ve sanat bilgini test et! Antik Çağ'dan Modern Dönem'e kadar 10 soruluk heyecanlı bir bilgi yarışması.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <a href="#main-content" class="skip-link">İçeriğe Atla</a>
+
+    <header class="main-header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="period.html?id=ancient" class="nav-link">Koleksiyonlar</a></li>
+                <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                <li><a href="sources.html" class="nav-link">Kaynakça</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <div class="quiz-hero">
+            <h1>Bilgi Yarışması</h1>
+            <p>Sanat tarihi ve kültürel miras bilgini test et! 10 soruyu doğru cevapla, yüksek skoru yakala.</p>
+        </div>
+
+        <div class="quiz-container">
+            <div class="quiz-card" id="quizCard">
+                <!-- Sorular buraya JavaScript ile gelecek -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner container">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+                <p>İnsanlığın büyük mirasını dijital ortama taşıyan sanal müze.</p>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="period.html?id=ancient">Antik Çağ</a></li>
+                    <li><a href="period.html?id=medieval">Orta Çağ</a></li>
+                    <li><a href="period.html?id=renaissance">Rönesans</a></li>
+                    <li><a href="period.html?id=modern">Modern Dönem</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="sources.html">Kaynakça</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Dönemlerin İzinde | Sena · Ebrar · Beyza | Bu site eğitim amaçlıdır.</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script>
+        // Quiz Soruları
+        const quizQuestions = [
+            {
+                question: "Antik Dünyanın Yedi Harikası'ndan biri olan ve Olympia'da bulunan devasa heykel hangisidir?",
+                options: ["Zeus Heykeli", "Artemis Tapınağı", "İskenderiye Feneri", "Rodos Heykeli"],
+                correct: 0,
+                explanation: "Phidias tarafından yapılan Zeus Heykeli, yaklaşık 12 metre yüksekliğindeydi ve altın ile fildişinden yapılmıştı."
+            },
+            {
+                question: "Hangisi Orta Çağ dönemine ait bir eserdir?",
+                options: ["Eyfel Kulesi", "Ayasofya", "Mona Lisa", "Guggenheim Müzesi"],
+                correct: 1,
+                explanation: "Ayasofya, MS 532-537 yıllarında Bizans İmparatorluğu döneminde inşa edilmiştir ve Orta Çağ'ın en önemli mimari eserlerindendir."
+            },
+            {
+                question: "Rönesans döneminin en ünlü tablosu olarak kabul edilen ve Leonardo da Vinci tarafından yapılan eser hangisidir?",
+                options: ["Venüs'ün Doğuşu", "Atina Okulu", "Mona Lisa", "Davut Heykeli"],
+                correct: 2,
+                explanation: "Mona Lisa (La Gioconda), Leonardo da Vinci'nin sfumato tekniğiyle yaptığı, dünyanın en tanınmış tablosudur."
+            },
+            {
+                question: "Modern mimarinin simgesi haline gelen, 1889'da Paris'te inşa edilen demir kule hangisidir?",
+                options: ["Sydney Opera Evi", "Eyfel Kulesi", "Atomium", "Louvre Piramidi"],
+                correct: 1,
+                explanation: "Eyfel Kulesi, Gustave Eiffel tarafından 1889 Dünya Fuarı için inşa edilmiştir ve 300 metre yüksekliğindedir."
+            },
+            {
+                question: "Disney'in 'Uyuyan Güzel' şatosuna ilham kaynağı olan, Bavyera'da bulunan masalsı şato hangisidir?",
+                options: ["Neuschwanstein Şatosu", "Versay Sarayı", "Buckingham Sarayı", "Topkapı Sarayı"],
+                correct: 0,
+                explanation: "Neuschwanstein Şatosu, Kral II. Ludwig tarafından inşa ettirilmiştir ve Disney şatolarına ilham kaynağı olmuştur."
+            },
+            {
+                question: "Michelangelo tarafından yapılan ve insan anatomisinin mükemmelliğini simgeleyen 5 metrelik mermer heykel hangisidir?",
+                options: ["Davut Heykeli", "Laocoon Heykeli", "Venüs Heykeli", "Augustus Heykeli"],
+                correct: 0,
+                explanation: "Davut Heykeli, Michelangelo'nun 26 yaşında yaptığı, Rönesans heykelciliğinin başyapıtıdır."
+            },
+            {
+                question: "Hangi eser, 'Bilbao Etkisi' ile bir şehrin ekonomik kaderini değiştiren modern mimarlık harikasıdır?",
+                options: ["Louvre Piramidi", "Guggenheim Müzesi Bilbao", "Sydney Opera Evi", "Atomium"],
+                correct: 1,
+                explanation: "Frank Gehry'nin tasarladığı Guggenheim Müzesi, Bilbao şehrini turizm merkezi haline getirmiştir."
+            },
+            {
+                question: "Antik Mısır'da Firavun Kefren'in yüzüne sahip olduğuna inanılan, aslan gövdeli dev heykel hangisidir?",
+                options: ["Abu Simbel", "Luxor Tapınağı", "Büyük Giza Sfenksi", "Karnak Tapınağı"],
+                correct: 2,
+                explanation: "Büyük Giza Sfenksi, MÖ 2500 civarında inşa edilmiş, 73 metre uzunluğunda dev bir heykeldir."
+            },
+            {
+                question: "Andy Warhol'un Marilyn Monroe'nun portrelerini kullandığı pop-art şaheseri hangisidir?",
+                options: ["Campbell Çorbası", "Marilyn Diptych", "Brillo Kutuları", "Elvis Presley"],
+                correct: 1,
+                explanation: "Marilyn Diptych, Warhol'un serigrafi tekniğiyle yaptığı, ünlülük kültürünü sorgulayan eseridir."
+            },
+            {
+                question: "Efes Antik Kenti'nde bulunan, Roma dönemine ait ve 12.000 parşömen rulosuna ev sahipliği yapan yapı hangisidir?",
+                options: ["Aspendos Tiyatrosu", "Celsus Kütüphanesi", "Pamukkale Travertenleri", "Side Tiyatrosu"],
+                correct: 1,
+                explanation: "Celsus Kütüphanesi, MS 117'de inşa edilmiş, antik dünyanın en büyük üçüncü kütüphanesidir."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let userScore = 0;
+        let answered = false;
+        let selectedOption = null;
+
+        function loadQuestion() {
+            const quizCard = document.getElementById('quizCard');
+            const question = quizQuestions[currentQuestionIndex];
+
+            quizCard.innerHTML = `
+                <div class="question-header">
+                    <span class="question-count">Soru ${currentQuestionIndex + 1}/${quizQuestions.length}</span>
+                    <span class="score">🎯 Puan: ${userScore}</span>
+                </div>
+                <div class="question-text">${question.question}</div>
+                <div class="options-list" id="optionsList">
+                    ${question.options.map((opt, idx) => `
+                        <button class="option-btn" data-opt-index="${idx}">
+                            ${String.fromCharCode(65 + idx)}. ${opt}
+                        </button>
+                    `).join('')}
+                </div>
+                <div class="feedback" id="feedback"></div>
+                <button class="next-btn hidden" id="nextBtn">Sonraki Soru →</button>
+            `;
+
+            answered = false;
+            selectedOption = null;
+
+            const options = document.querySelectorAll('.option-btn');
+            options.forEach(opt => {
+                opt.addEventListener('click', () => checkAnswer(parseInt(opt.dataset.optIndex)));
+            });
+
+            const nextBtn = document.getElementById('nextBtn');
+            if (nextBtn) {
+                nextBtn.addEventListener('click', nextQuestion);
+            }
+        }
+
+        function checkAnswer(selectedIdx) {
+            if (answered) return;
+
+            answered = true;
+            selectedOption = selectedIdx;
+            const question = quizQuestions[currentQuestionIndex];
+            const isCorrect = (selectedIdx === question.correct);
+
+            if (isCorrect) {
+                userScore += 10;
+            }
+
+            const options = document.querySelectorAll('.option-btn');
+            options.forEach((opt, idx) => {
+                opt.disabled = true;
+                if (idx === question.correct) {
+                    opt.classList.add('correct');
+                }
+                if (idx === selectedIdx && !isCorrect) {
+                    opt.classList.add('wrong');
+                }
+            });
+
+            const feedbackDiv = document.getElementById('feedback');
+            feedbackDiv.classList.add('show');
+
+            if (isCorrect) {
+                feedbackDiv.classList.add('correct-feedback');
+                feedbackDiv.innerHTML = `<i class="fa-solid fa-circle-check"></i> Doğru! ${question.explanation}`;
+            } else {
+                feedbackDiv.classList.add('wrong-feedback');
+                feedbackDiv.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> Yanlış! Doğru cevap: ${question.options[question.correct]}. ${question.explanation}`;
+            }
+
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.classList.remove('hidden');
+
+            const scoreElement = document.querySelector('.score');
+            if (scoreElement) {
+                scoreElement.innerText = `🎯 Puan: ${userScore}`;
+            }
+        }
+
+        function nextQuestion() {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < quizQuestions.length) {
+                loadQuestion();
+            } else {
+                showResult();
+            }
+        }
+
+        function showResult() {
+            const quizCard = document.getElementById('quizCard');
+            const maxScore = quizQuestions.length * 10;
+            const percentage = (userScore / maxScore) * 100;
+
+            let message = "";
+            if (percentage >= 80) {
+                message = "🏆 Mükemmel! Sen gerçek bir sanat tarihi uzmanısın!";
+            } else if (percentage >= 60) {
+                message = "🎉 Harika! Kültürel mirasa çok hakimsin!";
+            } else if (percentage >= 40) {
+                message = "📚 İyi! Biraz daha çalışmayla mükemmel olacaksın.";
+            } else {
+                message = "🌱 Başlangıç seviyesindesin. Müzeyi keşfetmeye devam et!";
+            }
+
+        quizCard.innerHTML = `
+            <div class="result-area">
+                <h2>🎯 Bilgi Yarışması Tamamlandı!</h2>
+
+            <div class="result-score">
+                ${userScore} / ${maxScore}
+            </div>
+
+            <div class="result-message">
+                ${message}
+            </div>
+
+            <p class="result-extra-text">
+                ${percentage >= 60
+                    ? 'Harika bir performans gösterdin! 🎉'
+                    : 'Bir sonraki sefere daha iyi yapacaksın! 💪'}
+            </p>
+
+            <button class="restart-btn" id="restartBtn">
+                🔄 Tekrar Dene
+            </button>
+
+            <a href="index.html" class="quiz-home-link">
+                ← Ana Sayfaya Dön
+            </a>
+        </div>
+    `;
+
+            const restartBtn = document.getElementById('restartBtn');
+            if (restartBtn) {
+                restartBtn.addEventListener('click', restartQuiz);
+            }
+        }
+
+        function restartQuiz() {
+            currentQuestionIndex = 0;
+            userScore = 0;
+            answered = false;
+            selectedOption = null;
+            loadQuestion();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadQuestion();
+
+            // Dark Mode başlat
+            const themeToggle = document.getElementById('themeToggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-mode');
+                    const icon = themeToggle.querySelector('i');
+                    if (icon) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                    }
+                }
+
+                themeToggle.addEventListener('click', () => {
+                    document.body.classList.toggle('dark-mode');
+                    const icon = themeToggle.querySelector('i');
+                    if (document.body.classList.contains('dark-mode')) {
+                        icon.classList.remove('fa-moon');
+                        icon.classList.add('fa-sun');
+                        localStorage.setItem('theme', 'dark');
+                    } else {
+                        icon.classList.remove('fa-sun');
+                        icon.classList.add('fa-moon');
+                        localStorage.setItem('theme', 'light');
+                    }
+                });
+            }
+
+            // Mobil menü
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

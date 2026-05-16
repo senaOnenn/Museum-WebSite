@@ -4,30 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dönem Eserleri - Sanal Dünya Müzesi</title>
+    <title>Dönem Eserleri - Dönemlerin İzinde</title>
+    <meta name="description"
+        content="Seçtiğiniz döneme ait tarihi eserleri keşfedin. Antik Çağ, Orta Çağ, Rönesans ve Modern dönem eserleri.">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<!-- BEYZA'NIN DÖNEMLERE ÖZEL DİNAMİK ARKA PLAN KODU - GÜNCEL -->
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const urlParams = new URLSearchParams(window.location.search);
-        const periodId = urlParams.get('id');
-        const heroSection = document.querySelector('.hero-section');
-
-        const donemResimleri = {
-            "ancient": "resimler/dene11.jpg",
-            "medieval": "resimler/21.jpg",   /* BURAYI medieval YAPTIK */
-            "renaissance": "resimler/dene11.jpg",
-            "modern": "resimler/32.jpg"
-        };
-
-        if (periodId && donemResimleri[periodId] && heroSection) {
-            heroSection.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('${donemResimleri[periodId]}')`;
-        }
-    });
-</script>
-
-<script src="app.js"></script>
 
 <body>
 
@@ -35,45 +22,85 @@
 
     <header class="main-header">
         <nav class="nav-container">
-            <div class="logo">DÖNEMLERİN İZİNDE</div>
+            <a href="index.html" class="logo">
+                <span class="logo-icon">◈</span>
+                <span class="logo-text">DÖNEMLERİN İZİNDE</span>
+            </a>
             <ul class="nav-links">
-                <li><a href="index.html">Koleksiyonlar</a></li>
-                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="period.html?id=ancient" class="nav-link">Koleksiyonlar</a></li>
+                <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                <li><a href="sources.html" class="nav-link">Kaynakça</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </nav>
     </header>
 
-
     <main id="main-content">
-        <section class="hero-section">
-            <!-- YENİ BUTON YERİ BURASI -->
-            <div class="back-navigation" style="text-align: left; padding: 0 40px; margin-bottom: 30px;">
-                <a href="index.html" class="btn-kesfet btn-back">
-                    <i class="fa-solid fa-arrow-left"></i> Ana Sayfaya Dön
+
+        <div class="period-hero">
+
+            <div class="container period-back-wrapper">
+                <a href="index.html" class="btn-back period-back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Koleksiyonlara Dön
                 </a>
             </div>
 
-            <div id="period-header-info">
-                <h1>Yükleniyor...</h1>
-                <p>Seçilen döneme ait eserler hazırlanıyor.</p>
+            <div id="period-header-info" class="period-header-info">
+
+                <h1 class="period-title">
+                    Dönem Yükleniyor...
+                </h1>
+
+                <p class="period-description">
+                    Seçilen döneme ait eşsiz eserler listeleniyor.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- Eserler Grid Alanı -->
+        <section class="container artifact-section">
+            <div id="artifact-grid" class="grid-container">
+                <p class="artifact-loading">
             </div>
         </section>
 
-
-        <section class="container">
-            <!-- Ebrar: Statik içerik temizlendi, grid app.js ile dolacak -->
-            <div id="artifact-grid" class="grid-container"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem;"></div>
-        </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Sanal Dünya Müzesi | Ekip: Sena, Ebrar, Beyza</p>
-            <div class="footer-links">
-                <a href="about.html">Hakkında</a> |
-                <a href="sources.html">Kaynakça</a>
+        <div class="footer-inner container">
+            <div class="footer-brand">
+                <span class="logo-icon">◈</span>
+                <strong>Dönemlerin İzinde</strong>
+                <p>İnsanlığın büyük mirasını dijital ortama taşıyan sanal müze.</p>
             </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="period.html?id=ancient">Antik Çağ</a></li>
+                    <li><a href="period.html?id=medieval">Orta Çağ</a></li>
+                    <li><a href="period.html?id=renaissance">Rönesans</a></li>
+                    <li><a href="period.html?id=modern">Modern Dönem</a></li>
+                </ul>
+            </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="sources.html">Kaynakça</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Dönemlerin İzinde | Sena · Ebrar · Beyza | Bu site eğitim amaçlıdır.</p>
         </div>
     </footer>
 

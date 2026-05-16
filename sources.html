@@ -4,20 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kaynakça - Sanal Dünya Müzesi</title>
+    <title>Kaynakça - Dönemlerin İzinde</title>
+    <meta name="description"
+        content="Dönemlerin İzinde Sanal Müze projesinde kullanılan kaynaklar, referanslar ve akademik bilgiler.">
     <link rel="stylesheet" href="style.css">
-    <!-- Premium Fontlar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         .page-hero {
             background-color: var(--text-color);
             padding: 72px 40px 64px;
             text-align: center;
         }
+
+        .page-hero .page-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: var(--accent-color);
+            border: 1px solid rgba(196, 98, 45, 0.4);
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 20px;
+        }
+
         .page-hero h1 {
             font-family: var(--font-display);
             font-size: clamp(2.4rem, 4vw, 3.6rem);
@@ -25,31 +41,36 @@
             color: #fff;
             margin-bottom: 16px;
         }
+
         .page-hero p {
             font-size: 1rem;
-            color: rgba(255,255,255,0.55);
+            color: rgba(255, 255, 255, 0.55);
             max-width: 600px;
             margin: 0 auto;
             font-weight: 300;
             line-height: 1.7;
         }
+
         .sources-body {
             max-width: 900px;
             margin: 60px auto 100px;
             padding: 0 32px;
         }
+
         .source-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 30px;
             margin-bottom: 30px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+
         .source-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
         }
+
         .source-card h2 {
             font-family: var(--font-display);
             font-size: 1.6rem;
@@ -58,10 +79,12 @@
             border-bottom: 1px solid var(--border-color);
             padding-bottom: 10px;
         }
+
         .source-list {
             list-style: none;
             padding: 0;
         }
+
         .source-list li {
             margin-bottom: 12px;
             display: flex;
@@ -69,11 +92,24 @@
             gap: 12px;
             font-size: 0.95rem;
             color: var(--muted-text);
+            line-height: 1.6;
         }
+
         .source-list li::before {
             content: '◈';
             color: var(--accent-color);
             font-size: 0.8rem;
+        }
+
+        .source-list li a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .source-list li a:hover {
+            color: var(--accent-dark);
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -89,48 +125,71 @@
                 <span class="logo-text">DÖNEMLERİN İZİNDE</span>
             </a>
             <ul class="nav-links">
-                <li><a href="index.html">Koleksiyonlar</a></li>
-                <li><a href="about.html">Hakkında</a></li>
+                <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="period.html?id=ancient" class="nav-link">Koleksiyonlar</a></li>
+                <li><a href="about.html" class="nav-link">Hakkında</a></li>
+                <li><a href="sources.html" class="nav-link">Kaynakça</a></li>
+                <li><a href="quiz.html" class="nav-link">Quiz</a></li>
             </ul>
+            <button class="nav-toggle" aria-label="Menüyü aç/kapat">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="theme-toggle" id="themeToggle" aria-label="Tema değiştir">
+                <i class="fa-solid fa-moon"></i>
+            </button>
         </nav>
     </header>
 
     <main id="main-content">
 
         <div class="page-hero">
-            <div style="color: var(--accent-color); font-size: 0.72rem; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 15px; font-weight: 500;">Akademik Referanslar</div>
+            <div class="page-tag">Akademik Referanslar</div>
             <h1>Kaynakça</h1>
-            <p>Bu projede kullanılan tüm akademik bilgiler, görsel materyaller ve teknik standartlar güvenilir platformlardan derlenmiştir.</p>
+            <p>Bu projede kullanılan tüm akademik bilgiler, görsel materyaller ve teknik standartlar güvenilir
+                platformlardan derlenmiştir.</p>
         </div>
 
         <div class="sources-body">
 
             <div class="source-card">
-                <h2>Görsel Kaynaklar</h2>
+                <h2>📚 Görsel Kaynaklar</h2>
                 <ul class="source-list">
-                    <li>Google Arts & Culture Digital Archives (Temel İlham Kaynağı)</li>
-                    <li>The Metropolitan Museum of Art Open Access</li>
-                    <li>Unsplash & Pexels (Dekoratif müze iç mekan görselleri)</li>
-                    <li>Louvre Müzesi Dijital Arşivi</li>
+                    <li>Google Arts & Culture Digital Archives — Temel ilham kaynağı ve görsel referans</li>
+                    <li>The Metropolitan Museum of Art — Open Access koleksiyonu</li>
+                    <li>Wikimedia Commons — Kamu malı görsel arşivi</li>
+                    <li>Louvre Müzesi — Dijital arşiv ve koleksiyon</li>
+                    <li>Unsplash & Pexels — Dekoratif müze iç mekan görselleri</li>
                 </ul>
             </div>
 
             <div class="source-card">
-                <h2>Akademik ve Tarihsel Veriler</h2>
+                <h2>📖 Akademik ve Tarihsel Veriler</h2>
                 <ul class="source-list">
-                    <li>Britannica Encyclopedia - Sanat Tarihi Bölümü</li>
-                    <li>UNESCO World Heritage List Descriptions</li>
-                    <li>British Museum Public Collection Metadata</li>
-                    <li>Louvre Museum Official Online Collection</li>
+                    <li>Encyclopaedia Britannica — Sanat Tarihi ve Mimarlık bölümleri</li>
+                    <li>UNESCO World Heritage Centre — Dünya Mirası listesi açıklamaları</li>
+                    <li>British Museum — Halka açık koleksiyon metadatası</li>
+                    <li>Ancient History Encyclopedia — Antik çağ eserleri bilgileri</li>
+                    <li>Khan Academy — Sanat Tarihi ders notları</li>
                 </ul>
             </div>
 
             <div class="source-card">
-                <h2>Teknik Referanslar ve Standartlar</h2>
+                <h2>💻 Teknik Referanslar ve Standartlar</h2>
                 <ul class="source-list">
-                    <li>W3C Web Content Accessibility Guidelines (WCAG 2.1)</li>
-                    <li>Google Lighthouse Performance & Best Practices[cite: 1]</li>
-                    <li>MDN Web Docs (Semantik HTML ve CSS Standartları)[cite: 1]</li>
+                    <li>W3C — Web Content Accessibility Guidelines (WCAG 2.1)</li>
+                    <li>Google Lighthouse — Performans ve iyileştirme metrikleri</li>
+                    <li>MDN Web Docs — HTML5, CSS3 ve JavaScript dokümantasyonu</li>
+                    <li>Font Awesome — İkon kütüphanesi</li>
+                    <li>Google Fonts — Cormorant Garamond & DM Sans font ailesi</li>
+                </ul>
+            </div>
+
+            <div class="source-card">
+                <h2>🎨 Proje İlham Kaynakları</h2>
+                <ul class="source-list">
+                    <li>British Museum Dijital Müze Deneyimleri — UX/UI ilhamı</li>
+                    <li>Rijksstudio (Rijksmuseum) — Görsel sunum ve koleksiyon yönetimi</li>
+                    <li>Smarthistory — Sanat tarihi anlatı dili</li>
                 </ul>
             </div>
 
@@ -139,20 +198,34 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-inner">
+        <div class="footer-inner container">
             <div class="footer-brand">
                 <span class="logo-icon">◈</span>
                 <strong>Dönemlerin İzinde</strong>
+                <p>İnsanlığın büyük mirasını dijital ortama taşıyan sanal müze.</p>
             </div>
-            <p class="footer-note">Bu site eğitim amaçlıdır. Web Tasarımı ve Değerlendirme dersi projesidir.</p>
-            <p class="footer-team">Proje Ekibi: Sena · Ebrar · Beyza &nbsp;|&nbsp; © 2026[cite: 1]</p>
-            <div class="footer-links">
-                <a href="about.html">Hakkında</a>
-                <span>·</span>
-                <a href="sources.html">Kaynakça</a>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="period.html?id=ancient">Antik Çağ</a></li>
+                    <li><a href="period.html?id=medieval">Orta Çağ</a></li>
+                    <li><a href="period.html?id=renaissance">Rönesans</a></li>
+                    <li><a href="period.html?id=modern">Modern Dönem</a></li>
+                </ul>
             </div>
+            <div class="footer-links-group">
+                <ul>
+                    <li><a href="about.html">Hakkında</a></li>
+                    <li><a href="sources.html">Kaynakça</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom container">
+            <p>© 2026 Dönemlerin İzinde | Sena · Ebrar · Beyza | Bu site eğitim amaçlıdır.</p>
         </div>
     </footer>
 
+    <script src="app.js"></script>
 </body>
+
 </html>
